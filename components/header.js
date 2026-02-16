@@ -93,7 +93,7 @@ class YogaHeader extends HTMLElement {
                         </ul>
                     </li>
                     <li><a href="${pathPrefix}blog.html">Blog</a></li>
-                    <li><a href="${pathPrefix}materiel.html">Matériel</a></li>
+                    <li><a href="${pathPrefix}material.html">Material</a></li>
                     <li><a href="${pathPrefix}about.html">Nosotras</a></li>
                     <li><a href="${pathPrefix}contact.html">Contacto</a></li>
                     <li><a href="#" class="btn btn--sage btn-nav">Academia Online</a></li>
