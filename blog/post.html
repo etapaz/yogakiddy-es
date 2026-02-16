@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo | YogaKiddy</title>
+    <meta name="description" content="Artículo del blog de YogaKiddy">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <style>
+        .post-title { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+        .post-meta { color: var(--color-text-light); margin-bottom: 1.2rem; }
+        .post-content img { max-width: 100%; height: auto; border-radius: var(--radius-md); }
+        .post-content iframe { width: 100%; max-width: 100%; aspect-ratio: 16/9; border: 0; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <yk-header></yk-header>
+    <main>
+        <section class="section">
+            <div class="container-narrow reveal visible">
+                <a href="../blog.html" class="back-link link-arrow">← Volver al blog</a>
+                <h1 class="post-title" id="post-title">Cargando…</h1>
+                <div class="post-meta" id="post-date"></div>
+                <article id="post-content" class="post-content"></article>
+            </div>
+        </section>
+    </main>
+    <yk-footer></yk-footer>
+
+    <script>
+    (function () {
+        function getSlug() {
+            const u = new URL(window.location.href);
+            return u.searchParams.get('slug');
+        }
+        function rewriteAssets(html) {
+            return html.replace(/https?:\/\/images\.bloggi\.co\/([a-z0-9]+)\.(jpg|png|jpeg|gif|webp)/gi, function (_m, name, ext) {
+                return '../images-bloggi/' + name + '.' + ext;
+            });
+        }
+        function log(group, obj) {
+            try {
+                console.groupCollapsed('[Blog Post] ' + group);
+                console.log(obj);
+                console.groupEnd();
+            } catch (e) {}
+        }
+        function validateData(data) {
+            if (!data || typeof data !== 'object' || !Array.isArray(data.posts)) return null;
+            return data.posts;
+        }
+        async function robustFetch(url) {
+            let attempt = 0;
+            const maxAttempts = 4;
+            let lastErr;
+            while (attempt < maxAttempts) {
+                try {
+                    const res = await fetch(url, { cache: 'no-cache' });
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    return await res.json();
+                } catch (e) {
+                    lastErr = e;
+                    const delay = Math.min(1000 * Math.pow(2, attempt), 8000);
+                    await new Promise(r => setTimeout(r, delay));
+                    attempt++;
+                }
+            }
+            throw lastErr;
+        }
+        const slug = getSlug();
+        const titleEl = document.getElementById('post-title');
+        const dateEl = document.getElementById('post-date');
+        const contentEl = document.getElementById('post-content');
+        const cacheKey = 'yk_blog_posts_cache_v1';
+        if (!slug) {
+            titleEl.textContent = 'Artículo no encontrado';
+            contentEl.innerHTML = '<p>No se especificó ningún artículo.</p>';
+            return;
+        }
+        (async function () {
+            const sources = ['../export.json', '/export.json'];
+            for (let i = 0; i < sources.length; i++) {
+                try {
+                    const data = await robustFetch(sources[i]);
+                    const posts = validateData(data);
+                    if (!posts) throw new Error('Estructura inválida');
+                    const post = posts.find(p => p && p.slug === slug);
+                    if (!post) throw new Error('No encontrado');
+                    document.title = post.title + ' | YogaKiddy';
+                    titleEl.textContent = post.title;
+                    if (post.published_at) {
+                        const fmt = new Intl.DateTimeFormat('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+                        dateEl.textContent = fmt.format(new Date(post.published_at));
+                    }
+                    const html = rewriteAssets(post.html || '');
+                    contentEl.innerHTML = html;
+                    try { localStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), posts })); } catch (e) {}
+                    return;
+                } catch (e) {
+                    log('Fuente fallida', { source: sources[i], error: String(e) });
+                }
+            }
+            try {
+                const cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
+                if (cached && Array.isArray(cached.posts)) {
+                    const post = cached.posts.find(p => p && p.slug === slug);
+                    if (post) {
+                        titleEl.textContent = post.title;
+                        const html = rewriteAssets(post.html || '');
+                        contentEl.innerHTML = html + '<p style="color: var(--color-text-light); margin-top: 1rem;">Contenido mostrado desde caché.</p>';
+                        return;
+                    }
+                }
+            } catch (e) {
+                log('Cache inválida', e);
+            }
+            titleEl.textContent = 'Error al cargar';
+            if (location.protocol === 'file:') {
+                contentEl.innerHTML = '<p>No se pudo cargar el artículo. Abre el sitio con un servidor local o despliega en Netlify.</p>';
+            } else if (navigator.onLine === false) {
+                contentEl.innerHTML = '<p>Sin conexión. Intenta nuevamente cuando tengas internet.</p>';
+            } else {
+                contentEl.innerHTML = '<p>No se pudo cargar el artículo. Intenta recargar más tarde.</p>';
+            }
+        })();
+    })();
+    </script>
+</body>
+</html>

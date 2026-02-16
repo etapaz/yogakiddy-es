@@ -1,0 +1,110 @@
+[build]
+  publish = "."
+
+# ═══ HEADERS ═══
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# ═══ 301 REDIRECTS — Anciennes URLs → Nouvelles URLs ═══
+
+# Pages principales
+[[redirects]]
+  from = "/formaciones"
+  to = "/#modalidades"
+  status = 301
+
+[[redirects]]
+  from = "/quienes-somos"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/contacto"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/"
+  to = "/blog.html"
+  status = 200
+
+# Formations principales
+[[redirects]]
+  from = "/formacion-internacional-monitor-yoga-infantil"
+  to = "/services/yoga-presencial.html"
+  status = 301
+
+[[redirects]]
+  from = "/como-ensenar-yoga-a-los-ninos"
+  to = "/services/yoga-online-grabado.html"
+  status = 301
+
+[[redirects]]
+  from = "/formacion-de-yoga-infantil-modalidad-en-linea"
+  to = "/services/yoga-online-vivo.html"
+  status = 301
+
+[[redirects]]
+  from = "/formacion-de-yoga-en-el-aula"
+  to = "/services/teacher-training.html"
+  status = 301
+
+# Ateliers en ligne → page la plus pertinente
+[[redirects]]
+  from = "/taller-en-linea-de-juegos-integrales-para-la-infancia"
+  to = "/services/yoga-online-grabado.html"
+  status = 301
+
+[[redirects]]
+  from = "/taller-en-linea-de-actividades-plasticas-y-reciclaje"
+  to = "/services/yoga-online-grabado.html"
+  status = 301
+
+[[redirects]]
+  from = "/mi-primera-clase-de-yoga"
+  to = "/services/kids-yoga.html"
+  status = 301
+
+# Pages spéciales
+[[redirects]]
+  from = "/material"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/acompanamiento-personalizado-yoga-infantil"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/pandi-yogi"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/encuentra-el-mejor-profesor-de-yoga-infantil-para-tu-hijo"
+  to = "/contact.html"
+  status = 301
+
+# Formations presencielles par ville → page presencial
+[[redirects]]
+  from = "/formacion-de-yoga-infantil-en-*"
+  to = "/services/yoga-presencial.html"
+  status = 301
+
+# Nettoyage des anciennes règles temporaires liées au blog
+
+# Catch-all : toute ancienne URL non matchée → homepage (soft 301)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
