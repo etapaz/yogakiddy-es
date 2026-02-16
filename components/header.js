@@ -70,7 +70,7 @@ class YogaHeader extends HTMLElement {
             <span class="sparkle sparkle-2">⭐</span>
             <span class="sparkle sparkle-3">✨</span>
             <span class="top-bar-icon">🎁</span>
-            <span class="top-bar-text"><a href="https://academia.yogakiddy.com/checkout/cart" target="_blank">Descarga 10 Cartas de Yoga GRATIS</a></span>
+            <span class="top-bar-text"><a href="https://academia.yogakiddy.com/super-pack-de-material-de-yoga-infantil-gratis/buy" target="_blank">Descarga 10 Cartas de Yoga GRATIS</a></span>
             <span class="top-bar-icon">🎁</span>
             <span class="sparkle sparkle-4">⭐</span>
             <span class="sparkle sparkle-5">✨</span>
