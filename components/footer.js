@@ -187,7 +187,7 @@ class YogaFooter extends HTMLElement {
                         </div>
                         <p class="footer-desc">Inspirando calma, creatividad y bienestar en la infancia a través del yoga y la atención plena. Desde 2016.</p>
                         <div style="margin-top: 1.5rem;">
-                            <a href="https://academia.yogakiddy.com/checkout/cart" target="_blank" class="footer-gift-card" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
+                            <a href="https://academia.yogakiddy.com/super-pack-de-material-de-yoga-infantil-gratis/buy" target="_blank" class="footer-gift-card" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
                                 <img src="${pathPrefix}assets/cartas-gratis.jpg" alt="Cartas Gratis" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2);">
                                 <div>
                                     <span style="display: block; font-weight: 700; font-size: 0.85rem; color: #E8956B; line-height: 1.2;">Regalo Gratis</span>

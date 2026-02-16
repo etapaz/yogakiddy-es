@@ -41,7 +41,7 @@ class YogaNewsletterForm extends HTMLElement {
                                 </div>
                             </div>
 
-                            <a href="https://academia.yogakiddy.com/checkout/cart" target="_blank" class="btn btn--sage btn--lg" style="box-shadow: 0 10px 25px rgba(61, 90, 58, 0.25);">
+                            <a href="https://academia.yogakiddy.com/super-pack-de-material-de-yoga-infantil-gratis/buy" target="_blank" class="btn btn--sage btn--lg" style="box-shadow: 0 10px 25px rgba(61, 90, 58, 0.25);">
                                 ¡Quiero mis cartas ahora!
                             </a>
                             <p style="font-size: 0.85rem; margin-top: 1rem; opacity: 0.7;">* Al descargar te unirás a nuestra comunidad de +70.000 suscriptoras.</p>
