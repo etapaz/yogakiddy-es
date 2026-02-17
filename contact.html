@@ -68,9 +68,9 @@
                     <!-- Right: Form -->
                     <div class="reveal reveal-delay-2">
                         <div class="section-panel" style="margin: 0;">
-                            <form action="https://api.web3forms.com/submit" method="POST">
+                            <form id="contact-form">
                                 <input type="hidden" name="access_key" value="592531b3-657e-4489-863e-ba00ff105f8b">
-                                <input type="hidden" name="redirect" value="gracias.html">
+                                <input type="hidden" name="subject" value="Nuevo mensaje desde YogaKiddy">
                                 <div class="form-group">
                                     <label for="name" class="form-label">Nombre</label>
                                     <input type="text" id="name" name="name" required class="form-input"
@@ -86,9 +86,47 @@
                                     <textarea id="message" name="message" required class="form-textarea"
                                         placeholder="¿En qué podemos ayudarte?"></textarea>
                                 </div>
+                                <div id="form-result" style="margin-bottom: 1rem; text-align: center; display: none;"></div>
                                 <button type="submit" class="btn btn--rose" style="width: 100%;">Enviar mensaje</button>
                             </form>
                         </div>
+                        <script>
+                            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                                e.preventDefault();
+                                const form = e.target;
+                                const result = document.getElementById('form-result');
+                                const submitBtn = form.querySelector('button[type="submit"]');
+                                
+                                submitBtn.disabled = true;
+                                submitBtn.textContent = 'Enviando...';
+                                
+                                const formData = new FormData(form);
+                                
+                                fetch('https://api.web3forms.com/submit', {
+                                    method: 'POST',
+                                    body: formData
+                                })
+                                .then(async (response) => {
+                                    let json = await response.json();
+                                    if (response.status == 200) {
+                                        window.location.href = 'gracias.html';
+                                    } else {
+                                        result.innerHTML = "Algo salió mal. Por favor, intenta nuevamente.";
+                                        result.style.color = "#dc2626";
+                                        result.style.display = "block";
+                                        submitBtn.disabled = false;
+                                        submitBtn.textContent = 'Enviar mensaje';
+                                    }
+                                })
+                                .catch((error) => {
+                                    result.innerHTML = "Error de conexión. Por favor, verifica tu conexión a internet.";
+                                    result.style.color = "#dc2626";
+                                    result.style.display = "block";
+                                    submitBtn.disabled = false;
+                                    submitBtn.textContent = 'Enviar mensaje';
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
