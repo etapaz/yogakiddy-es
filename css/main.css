@@ -365,6 +365,30 @@ img {
     transform: translateX(4px);
 }
 
+/* ═══ BACK LINK (for blog posts) ═══ */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s var(--ease-out);
+}
+
+.back-link:hover {
+    gap: 0.8rem;
+}
+
+.back-link::before {
+    content: '\2190';
+    display: inline-block;
+    transition: transform 0.3s var(--ease-out);
+}
+
+.back-link:hover::before {
+    transform: translateX(-6px);
+}
+
 /* ═══ GRID LAYOUTS ═══ */
 .grid-2 {
     display: grid;
