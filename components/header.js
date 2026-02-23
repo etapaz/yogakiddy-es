@@ -96,7 +96,7 @@ class YogaHeader extends HTMLElement {
                     <li><a href="${pathPrefix}material.html">Material</a></li>
                     <li><a href="${pathPrefix}about.html">Nosotras</a></li>
                     <li><a href="${pathPrefix}contact.html">Contacto</a></li>
-                    <li><a href="#" class="btn btn--sage btn-nav">Academia Online</a></li>
+                    <li><a href="https://academia.yogakiddy.com/login" class="btn btn--sage btn-nav">Academia Online</a></li>
                 </ul>
                 <button class="menu-toggle" aria-label="Menu">
                     <span></span><span></span><span></span>
