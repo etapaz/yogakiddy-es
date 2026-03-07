@@ -92,9 +92,9 @@ class YogaHeader extends HTMLElement {
                             <li><a href="${pathPrefix}services/yoga-online-vivo.html">Clases en Vivo (Meet)</a></li>
                         </ul>
                     </li>
-                    <li><a href="${pathPrefix}blog.html">Blog</a></li>
                     <li><a href="${pathPrefix}material.html">Material</a></li>
                     <li><a href="${pathPrefix}about.html">Nosotras</a></li>
+                    <li><a href="${pathPrefix}blog.html">Blog</a></li>
                     <li><a href="${pathPrefix}contact.html">Contacto</a></li>
                     <li><a href="https://academia.yogakiddy.com/login" class="btn btn--sage btn-nav">Academia Online</a></li>
                 </ul>
@@ -370,6 +370,16 @@ class YogaHeader extends HTMLElement {
             }
 
             @media (max-width: 768px) {
+                .top-bar {
+                    font-size: 0.75rem;
+                    padding: 0.5rem 0.8rem;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .top-bar-text a {
+                    font-size: 0.75rem;
+                }
+                .sparkle { display: none; }
                 .menu-toggle { display: flex; }
                 .nav-links {
                     display: none;
