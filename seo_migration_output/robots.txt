@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Disallow: /admin/
+Sitemap: https://yogakiddy.com/sitemap.xml
