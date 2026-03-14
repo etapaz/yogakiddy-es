@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <title>Profesores de yoga para niños en Uruguay | YogaKiddy Academy</title>
+    <meta name="description" content="Encuentra instructores certificados de YogaKiddy Academy en Uruguay y conéctate con profesores locales de yoga infantil.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/directorio.css">
+    <script src="components/header.js" defer></script>
+    <script src="components/footer.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <yk-header></yk-header>
+
+    <main>
+        <section class="directorio-hero">
+            <div class="container">
+                <span class="pill-badge" style="background: var(--color-white); color: var(--color-sage);">Comunidad Uruguay</span>
+                <h1 class="mb-4">Profesores de yoga para niños en Uruguay</h1>                    <p class="text-large" style="max-width: 800px; margin: 0 auto; color: var(--color-text-light);">Este directorio es un listado de terceros, no validado ni afiliado oficialmente a YogaKiddy. Verifica credenciales y contacta directamente al profesor antes de contratar sus servicios.</p>
+
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="filter-section" style="margin-bottom: 3rem;">
+                    <div class="filter-container" id="country-filters">
+                        <!-- Botones de país generados dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="profesores-grid" id="profesores-grid">
+                    <!-- Lista de profesores por país -->
+                </div>
+                <div class="empty-state" id="empty-state">
+                    <h3 class="mb-4">Todavía no hay profesores registrados en Uruguay</h3>
+                    <p>Estamos expandiendo nuestra comunidad en Uruguay; vuelve pronto o contáctanos para sumar tu clase.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <yk-footer></yk-footer>
+
+    <script src="./js/profesores-data.js"></script>
+    <script src="./js/render-profesores.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initProfesores({
+                gridId: 'profesores-grid',
+                emptyStateId: 'empty-state',
+                filterContainerId: 'country-filters',
+                filterCountry: 'Uruguay',
+                filtersEnabled: true,
+                redirectMode: true
+            });
+        });
+    </script>
+</body>
+
+</html>

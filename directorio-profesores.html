@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <title>Directorio de Profesores de Yoga Infantil | YogaKiddy Academy</title>
+    <meta name="description"
+        content="Encuentra profesores certificados de yoga para niños en tu país. Directorio internacional de instructores de YogaKiddy Academy.">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/directorio.css">
+    <script src="components/header.js" defer></script>
+    <script src="components/footer.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <yk-header></yk-header>
+
+    <main>
+        <section class="directorio-hero">
+            <div class="container">
+                <span class="pill-badge" style="background: var(--color-white); color: var(--color-sage);">Comunidad Global</span>
+                <h1 class="mb-4">Directorio de Profesores</h1>
+                <p class="text-large" style="max-width: 800px; margin: 0 auto; color: var(--color-text-light);">
+                    Descubre nuestra red internacional de instructores certificados que llevan el bienestar y la alegría del yoga a los niños en todo el mundo.
+                </p>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-container" id="country-filters">
+                    <!-- Los botones de filtro se inyectarán dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="profesores-grid" id="profesores-grid">
+                    <!-- Profesores will be injected here -->
+                </div>
+                <div class="empty-state" id="empty-state">
+                    <h3 class="mb-4">¡Aún no hay profesores registrados en este país!</h3>
+                    <p>Estamos expandiéndonos continuamente. Prueba con otro país o vuelve pronto.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <yk-footer></yk-footer>
+    <script id="profesores-data" type="application/json">
+        [
+            {
+                "submissionId": "WOoeLWa",
+                "nombre": "Alejandra Sanchez",
+                "whatsapp": "+543415859184",
+                "bio": "Mi nombre es Alejandra, ejerzo como terapeuta Holistica integral y profe de yoga integral, yoga kundalini y yoga para niños, desde hace casi 10 años. Me encanta compartir mis conocimientos y vivencias. Así como aprender cada día más para brindar herramientas, tanto a niños como a adultos. Tomar el yoga como una disciplina de vida me trajo a conocerme y reencontrarme con mi niña interior y así poder disfrutar enseñar a los peques. Gracias por darme la posibilidad y oportunidad de compartirnos. NAMASTE 🧘‍♀️🙏❤️ De mi luz a tu luz 😘",
+                "foto": "",
+                "redes": "Vidaplena.amor",
+                "pais": "Argentina",
+                "ciudad": "Rosario. Santa Fe",
+                "edades": "4 a 12 años"
+            },
+            {
+                "submissionId": "44kzzRr",
+                "nombre": "Sandra Aguirre",
+                "whatsapp": "+56998010544",
+                "bio": "Soy Sandra, monitora de yoga, pilates y manualidades para adultos mayores y niños. Acompaño a distintas generaciones a reconectar con su cuerpo, su creatividad y su bienestar, siempre desde el respeto, la alegría y el movimiento consciente.",
+                "foto": "https://storage.tally.so/private/IMG_3469.jpeg?id=yxe4E0&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Inl4ZTRFMCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.H5Mo2byHB64Iy1RER_tbysZ6SQsQkML0qHxXmEkbOXE&signature=0bbd4f6ba59da4c001bf7de721c42e857e87e98a3aca361dcb0686410348e1b4",
+                "redes": "@latienditadetita",
+                "pais": "Chile",
+                "ciudad": "Colina",
+                "edades": "Niños y adultos mayores"
+            },
+            {
+                "submissionId": "WOooAYj",
+                "nombre": "Arlette Riffo Lizama",
+                "whatsapp": "+56950189505",
+                "bio": "Hola Soy Arlette Riffo, asistente social de profesión, instructora especializada en yoga infantil, arte terapia y mindfulness, acompañando a niños y niñas a conectar con su cuerpo, sus emociones y su creatividad de una manera lúdica y amorosa. A través de clases dinámicas y espacios de expresión artística, ayudo a los más pequeños a desarrollar la atención plena, la autorregulación emocional y la confianza en sí mismos. Mi enfoque integra movimiento, respiración consciente y arte como herramientas para el bienestar y el desarrollo integral infantil. Si buscas una propuesta que nutra el corazón y la mente de tus hijos, estaré encantada de compartir este camino contigo.",
+                "foto": "https://storage.tally.so/private/1000393110.jpg?id=eL7ekq&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVMN2VrcSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.G8MOQ4yJxg-d2_F3yrs7pWkpXRwt3EzI2CoIolrnDEU&signature=83df3be3dfeb73cb16520c1a3c2524f04ad2a08ef1f45bd418762d11f66fd8b1",
+                "redes": "@Michiyoga18",
+                "pais": "Chile",
+                "ciudad": "Concepción",
+                "edades": "Niñ@s 4 a 7 y 8 a 12"
+            },
+            {
+                "submissionId": "Ek1eKqB",
+                "nombre": "Karina Rivera",
+                "whatsapp": "+56988520457",
+                "bio": "Soy educadora de párvulos 20 experiencia, de la ciudad de concepción , madre de una niñas 17 años . Con especialización en educación Waldorf ,Bosque Escuela , inglés lúdico .",
+                "foto": "",
+                "redes": "Educar_nos",
+                "pais": "Chile",
+                "ciudad": "Concepción",
+                "edades": "4 a 6 años"
+            },
+            {
+                "submissionId": "EkRxZdX",
+                "nombre": "Macarena Valenzuela Gajardo",
+                "whatsapp": "+56989184805",
+                "bio": "Mi nombre es Macarena, soy monitora de yoga infantil y adolescentes, instructora de danza clásica y árabe, reikista, realizando terapias complementarias integrando y combinando todos mis conocimientos, acompañando a niños, niñas y adolescentes ya que mi objetivo es entregarles herramientas del yoga que les permita liberar energía y volver a la calma, ayudar a la salud mental, física, emocional reconociendo sus emociones para liberarlas y controlarlas junto a posturas de yoga, juegos, cantos, música, danza,sonido terapia, aromas terapias,relajaciones,meditaciones, para así ayudar en sus infancias y adolescencias sean más felices, cuidados y sostenidos. Además tengo talleres de especialización de yoga cuentacuentos,yoga de la risa,yoga juegos,yoga emociones, yoga en el aula.",
+                "foto": "https://storage.tally.so/private/75920.jpg?id=7apPr9&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhcFByOSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.EcJ53DpOBZVnP69XwJN8IYn1pSglToneVarxujimH6I&signature=7c3df8d38ab9f74b0ec40590d954b95792c00de90447b856bbd5330d3186ed35",
+                "redes": "Instagram: makayoga",
+                "pais": "Chile",
+                "ciudad": "Concepción Y Comunas De Sus Alrededores",
+                "edades": "4 años a 18 años"
+            },
+            {
+                "submissionId": "eoXlMx",
+                "nombre": "Helga Godoy",
+                "whatsapp": "+56979728326",
+                "bio": "Hola a todos soy Fonoaudióloga y monitora de Yoga infantil insertada en el mundo de la meditación hacia los pequeñinesdel hogar para hacer de este lugar un mundo mejor 😊🌍🥰",
+                "foto": "https://storage.tally.so/private/IMG_20231126_193259_421.jpg?id=joQ0J6&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImpvUTBKNiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.FWttPW8R84Vd7Up7Yik46qA2DsfcTadZes_1wpwb0hg&signature=d65d349ad1180d077ef0b5b3e0887fe31b6cd909113fb78a5c0a272b8d42cf35",
+                "redes": "@yogainlota",
+                "pais": "Chile",
+                "ciudad": "Concepción, Lota Y Alrededores",
+                "edades": "4 a 12 años"
+            },
+            {
+                "submissionId": "Ek1WeMB",
+                "nombre": "Karina Lisboa bello",
+                "whatsapp": "+56996353902",
+                "bio": "Educadora con vocación, alegre y responsable con especialización en yoga infantil ,cosa que me enamora cada día. Namaste!!",
+                "foto": "https://storage.tally.so/private/Screenshot_20240124-151252-720.png?id=D5DV2l&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkQ1RFYybCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.PY8eWJ5z1T_OcfaN6QcsU058WIVxW4WwibB8Az-BsY4&signature=d37551abc9957153afbef7a41f0cb3243e06bfae84cc0290a75832fa8644246a",
+                "redes": "Yogalisb",
+                "pais": "Chile",
+                "ciudad": "Coquimbo",
+                "edades": "2 a 15 años"
+            },
+            {
+                "submissionId": "aQxEKJB",
+                "nombre": "Andrea HEINSOHN",
+                "whatsapp": "+56993595773",
+                "bio": "Mi nombre es Andrea Heinsohn, soy mamá de 4 hijos maravillosos , dos hombres y dos niñitas ya mayores pero para mí siempre serán mis guaguas. Tengo además 3 hijos perrunos y mi conejo.sot educadora de párvulos y he hecho varios cursos de yoga en distintas academias , lo que tiene muy feliz y movivada con las clases. Estoy felizmente casada y agradecida de todo lo que he vivido.",
+                "foto": "https://storage.tally.so/private/73b86056-bb4e-47ab-87dc-1b46401ff23a.jpeg?id=gLNbEN&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImdMTmJFTiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0._nUvlmhNYBiK3xlX_HgM5Q76nI3Po1KqLxz47O5OtD0&signature=6a795e92938c2cbf2f6cd9764c908ddcc731c710bc79b14c43cbacbe85159f9f",
+                "redes": "Kidscreataller",
+                "pais": "Chile",
+                "ciudad": "Curico",
+                "edades": "Niños entre 2 y 10 años"
+            },
+            {
+                "submissionId": "QKdZl7Y",
+                "nombre": "María Alejandra Ballesteros García",
+                "whatsapp": "+56932433144",
+                "bio": "Soy Profesora de Básica y de Yoga. En estos momentos trabajo en varias Juntas Vecinales de Las Condes, dando clases a niños, adultos y adultos mayores, en mat y en silla.",
+                "foto": "",
+                "redes": "@experienciasyogachile",
+                "pais": "Chile",
+                "ciudad": "LAS Condes",
+                "edades": "6 a 99 años"
+            },
+            {
+                "submissionId": "dWA61XD",
+                "nombre": "Sofía Vitale",
+                "whatsapp": "+56926122789",
+                "bio": "Mi nombre es Sofía Vitale. Nací en Argentina y vivo hace 22 años en Chile. Soy instructora de Yoga Infantil con formación especializada en Yoga Oncológico Pediátrico y Yoga Adaptado, facilitadora de Yoga Sensible al Trauma y terapeuta holística, formada con entidades internacionales. Mi enfoque integra herramientas de acompañamiento corporal, emocional y sistémico, orientadas al bienestar de niños/as, adolescentes y sus familias.",
+                "foto": "",
+                "redes": "@terapias.sofiavitale",
+                "pais": "Chile",
+                "ciudad": "Las Condes, RM",
+                "edades": "1 a 16 años"
+            },
+            {
+                "submissionId": "81BvyWP",
+                "nombre": "Mónica Bassi",
+                "whatsapp": "+56942599844",
+                "bio": "Exploradora del movimiento y la calma! Acompaño a los más pequeños en viajes imaginarios a través del yoga, donde cada postura cuenta una historia. Mi misión es que cada niño descubra su fuerza interior mientras jugamos y respiramos juntos.",
+                "foto": "https://storage.tally.so/private/IMG_1348.jpeg?id=2lYkxL&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJsWWt4TCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.mxOJIeCN_xNBrFV_-0cSLgrU6pV3xO9GB08sGBiE_v0&signature=85c555c423da1ee7380745dd67c01733d545393573e121d3165cd5a41537e70e",
+                "redes": "Mónica Bassi López",
+                "pais": "Chile",
+                "ciudad": "Maipú",
+                "edades": "4 a 7 años"
+            },
+            {
+                "submissionId": "dWPVpQd",
+                "nombre": "Priscila Figueroa Uribe",
+                "whatsapp": "+56998474682",
+                "bio": "Actriz y pedagoga teatral. Instructora de Yoga Integral, Aeroyoga y Yoga Infantil con más de 15 años de experiencia en la enseñanza de talleres culturales y de bienestar para las infancias, promoviendo el teatro y el yoga a través del juego, la música y la técnica de cuentacuentos en Kamishibai. Actualmente enseño Yoga Infantil y Aerokids en Maipú y Calera de Tango, Región Metropolitana.",
+                "foto": "https://storage.tally.so/private/IMG_5339.jpeg?id=pGNKry&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InBHTktyeSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.Ia6t-S1Nxsw3HPFL0IKOQ9s9WuZ-f3VMrn9lsSHbcbQ&signature=e9e5efc295a22d1ec2232803c6e5e9e9ec78990eb91d124a547e9883e5208df0",
+                "redes": "@aliwen_kamishibai",
+                "pais": "Chile",
+                "ciudad": "Maipú, Calera De Tango, Peñaflor. Región Metropolitana",
+                "edades": "2 a 11 años"
+            },
+            {
+                "submissionId": "QKrVEL7",
+                "nombre": "Marcia Avendaño Zurita",
+                "whatsapp": "+56950171602",
+                "bio": "Hola! Soy Marcia, mamá, Doula y profesora de yoga para mujeres e infancias, con enfoque terapéutico e inclusivo.",
+                "foto": "https://storage.tally.so/private/008A1987.JPG?id=VVY5da&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlZWWTVkYSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.8jgjtqdlJUqAFzct4sz68oQifUP1fRxpUvFgrKVvO0o&signature=7a4d1a67b28394ce86370b45e07eef2c5e2a49ab3bad8ffc66c1df310d7f362c",
+                "redes": "mundomamika",
+                "pais": "Chile",
+                "ciudad": "Maipú, Ñuñoa Y La Reina",
+                "edades": "Toda la primera infancia"
+            },
+            {
+                "submissionId": "akKBZB",
+                "nombre": "Veronica Hormazabal",
+                "whatsapp": "+56951784437",
+                "bio": "Hola, soy Verónica, mama de dos adolescentes de profesión Psicóloga y a través de la música, la yoga y el baile me permiten conectar con las personitas a través del juego y el movimiento. Dispuesta siempre a crear espacios acogedores donde encontrarnos, escucharnos y acompañarnos. Amante de la danza, toco guitarra, y bailo danzas folklóricas.",
+                "foto": "https://storage.tally.so/private/Foto-vero-delantal.jpeg?id=14Jxy4&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0Snh5NCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.Pl-N5GwCsSCyOaCqp0R8JlxOOLOqJXmnXr7Sl2uHBbU&signature=e2c9c5876129dc6b65d8e406ca1427fa350929fb43e9582a3cb9688083afb353",
+                "redes": "psicologia.movimiento_",
+                "pais": "Chile",
+                "ciudad": "Peñalolen",
+                "edades": "Desde los 7 hasta los 12 años"
+            },
+            {
+                "submissionId": "D41D99b",
+                "nombre": "Angelina Fernández",
+                "whatsapp": "+56984156989",
+                "bio": "✨ Sobre mí Soy mamá de Facundo y Celeste, y profesora de Educación Física de profesión. En los últimos años, me he especializado en el trabajo con la primera infancia, desarrollando propuestas que integran el cuerpo, el juego, el movimiento y el respeto por los ritmos de cada niño y niña. Me considero una persona comprometida, responsable y proactiva, con una mirada basada en la seguridad afectiva y el respeto profundo hacia la infancia. Disfruto crear espacios donde los niños y niñas puedan expresarse libremente, desarrollarse con alegría y donde también los adultos podamos reflexionar sobre nuestras prácticas y vínculos.",
+                "foto": "https://storage.tally.so/private/IMG_2287.jpeg?id=5LqjeZ&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVMcWplWiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.JbZky_lQHX8VwF0V3jGoYB1Xy7-GUpYsCkLZiCAVses&signature=87cbe61b69a7771e4a481d0558464f07b742586eb43eb8ff53f30e98816c5896",
+                "redes": "Anma Yoga",
+                "pais": "Chile",
+                "ciudad": "Provincia De Quillota Y Alrededores",
+                "edades": "3 a 9 años"
+            },
+            {
+                "submissionId": "qNXg18",
+                "nombre": "Pamela Zevallos Arancibia",
+                "whatsapp": "+56998469151",
+                "bio": "Mamá y Fonoaudióloga de base, Profesora de yoga Tradición Sivananda desde el año 2015, Diplomada en Yoga Infantil, con múltiples cursos en Educación Emocional, Neurociencias y Yoga infantil.",
+                "foto": "https://storage.tally.so/private/Tia-Pulmahue-Yoga.png?id=P9OYgB&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlA5T1lnQiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.VsUE_xcP_iC-EDFSznyR3J2gP3Dg8Fuo8zT8qD9EZwg&signature=a2d233324edd4429ce7aa842954fb6213dcf37f22822ef6c5d4c6e9d1ba7cd88",
+                "redes": "Pamela Patricia Zevallos Arancibia",
+                "pais": "Chile",
+                "ciudad": "Quellón, Chiloé, Región De Los Lagos",
+                "edades": "Clases para niños y adultos"
+            },
+            {
+                "submissionId": "RrqR5Q",
+                "nombre": "Paloma García Castillo",
+                "whatsapp": "+56979165834",
+                "bio": "Soy una exploradora de la vida, me encanta aprender, soñar, reír, apreciar la naturaleza y sobre todo sentir mucho amor en mi corazón. Si buscas un espacio de conexión para tí y para tu/s peque/s, llegaste al lugar indicado. Cuento con valiosas herramientas de Yoga y Mindfulness. Con ellas voy a acompañarte en un lindo proceso de aprendizaje y exploración lúdica de estas disciplinas milenarias, que sin duda, impactarán de manera muy positiva en el desarrollo integral de tu hijo/a y en el vínculo entre ustedes. La práctica constante es la clave para despertar toda esa belleza que habita en nuestro interior. Te espero. Con amor, Paloma.",
+                "foto": "https://storage.tally.so/private/1000064246.jpg?id=QRVPOk&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlFSVlBPayIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.70pm85F3E-eNYIleiGcIiR9VyLKCu0hQ1kDrjBWizOE&signature=d6086b528ae47235390a575e34451efa068500cf41aacf2ddf37a41c4c558c3b",
+                "redes": "@yogaedad_delsol",
+                "pais": "Chile",
+                "ciudad": "Región De Valparaíso",
+                "edades": "4 a 12 años."
+            },
+            {
+                "submissionId": "gDAr6DD",
+                "nombre": "LAURA ARAUJO",
+                "whatsapp": "+56961102439",
+                "bio": "Maestra de educación infantil por 23años de servicio al Ministerio de Educación en Venezuela y de yoga infantil por 5años ,además practicante de yoga kundalini por 8años en Vzla y acá en Chile práctico Pilate y kundalini yoga .",
+                "foto": "https://storage.tally.so/private/IMG-20231226-WA0057.jpg?id=4LAEpO&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRMQUVwTyIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.dfVNiGzoiS-KMFQiedtgdbiauWElUreiDmZU9MBGzX4&signature=888c599cf9c5717e4a42f95fa3400fb59f3ed3e18ed49a4609004acb847a4aa3",
+                "redes": "Yoguistar",
+                "pais": "Chile",
+                "ciudad": "San Miguel",
+                "edades": "Desde 4años a 10años"
+            },
+            {
+                "submissionId": "dRJKAy",
+                "nombre": "Daniela Pino Molina",
+                "whatsapp": "+56963060919",
+                "bio": "Soy Mamá, Kinesióloga de profesión, Profesora de Yoga de adultos, niñ@s, pre y post natal y Terapeuta Floral. Descubrí en el Yoga un estilo de vida maravilloso y mi anhelo es compartir con el mundo los beneficios del yoga como herramienta terapéutica.",
+                "foto": "https://storage.tally.so/private/foto-dani.jpg?id=9ZQOXY&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlaUU9YWSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.-XZEVfNbWMzrW8axgl3Ao37Mg9PSk_Swbu8sGNZsJBw&signature=c746220aefb7c5f0549d2b2a5197f83d1f20190831ab04d49d31666a81c7ae8e",
+                "redes": "@danipino_yoguini",
+                "pais": "Chile",
+                "ciudad": "Santiago",
+                "edades": "4 a 18 años"
+            },
+            {
+                "submissionId": "0QM2AZA",
+                "nombre": "Lola Baeza",
+                "whatsapp": "+56973860103",
+                "bio": "Soy instructora de yoga infantil y facilitadora de arteterapia, con diplomados en yoga para niños y niñas con necesidades educativas especiales. Acompaño a la infancia desde un enfoque lúdico, inclusivo y terapéutico, integrando movimiento, respiración, arte y juego para fomentar el autocuidado, la atención plena y la expresión emocional.",
+                "foto": "https://storage.tally.so/private/IMG_20220526_155421_198.jpg?id=lLzLVo&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImxMekxWbyIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.HZCTdYEpe-C970sRJkYONPyzDmTiyD6WJSVz-GTFlnc&signature=6d811687539497cb4fd9b12eb9a1fae098fdd662c5c8c61b86247b26f9445422",
+                "redes": "@coloridoespiral",
+                "pais": "Chile",
+                "ciudad": "Santiago",
+                "edades": "7 a 10 años"
+            },
+            {
+                "submissionId": "ODP5G2p",
+                "nombre": "Queisa Quezada M",
+                "whatsapp": "+56997549791",
+                "bio": "Me gusta la interacción del cuerpo como medio de expresión y comunicación con uno mismo y con los demás. Esté ha sido mi camino con el yoga. He ido aprendiendo y sumando experiencias con niños. Me gusta el movimiento y descubrir sus posibilidades. Me gusta aprender, jugar y compartir.",
+                "foto": "https://storage.tally.so/private/foto-queisa.jpg?id=2LvJG9&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJMdkpHOSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.gg5kuFNr5EsphkrjLoph-hGRXEPmf4ctkygN4223ou8&signature=64fd5aef64128b7a10c50c9fb6681e9dfe5a29930a5c7b07198ba3990b267c53",
+                "redes": "$15.000",
+                "pais": "Chile",
+                "ciudad": "Santiago De Chile, Chile, 33s27, 70w40",
+                "edades": "3 a 7 años, Adultos"
+            },
+            {
+                "submissionId": "xXQY19o",
+                "nombre": "Paula yañez",
+                "whatsapp": "+56966233245",
+                "bio": "Soy profesora de educación diferencial, amo la naturaleza y el deporte en la montaña. Tengo 35 años con alma de niña y trabajo en una escuela rural. Soy hija, hermana, amiga y polola.",
+                "foto": "https://storage.tally.so/private/IMG_4422.jpeg?id=JLD6MK&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkpMRDZNSyIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.uAlPhwQZJxpauzgE3qWs9jXl7Rsa1ZwsersD9RjQ7SI&signature=209a6d20a0fcc6e066c8bf2af07a4c3677e0f63448c0f617e4e24800d4201028",
+                "redes": "P.a.y.o_O3",
+                "pais": "Chile",
+                "ciudad": "Talca Talca",
+                "edades": "5 a 12 años"
+            },
+            {
+                "submissionId": "gOPOdK",
+                "nombre": "Adriana Bustamante Gamboa",
+                "whatsapp": "+56991394021",
+                "bio": "Soy profesora y terapeuta en masaje craneal y me eduqué además, con la formación en Yoga Infantil de YogaKiddy. Adoro dar clases y talleres de Yoga a niños y niñas, ya que se concentran , se relajan, comparten con sus pares, juegan y aprenden sobre sus emociones, su mente y su cuerpo, a través de esta importantísima disciplina. Actualmente, vivo en Valdivia, Región de los Ríos, Chile.",
+                "foto": "https://storage.tally.so/private/Adri-biblioteca.jpg?id=8LxYaP&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhMeFlhUCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.ojTdaqWqKyhAA1-Wi8Hd4Ke2OuYlFYoQPGb20LnObho&signature=950632ffa93f70e3b16759d1da04db5f97fa95ac3bedff21c15b87e9c01efaf0",
+                "redes": "Adri Bustamante Gamboa",
+                "pais": "Chile",
+                "ciudad": "Valdivia",
+                "edades": "Desde tres años a Educación Media"
+            },
+            {
+                "submissionId": "7POvR0",
+                "nombre": "Carmen Sepulveda",
+                "whatsapp": "+56964251231",
+                "bio": "Soy Carmen, mamá de Luz y fundadora de YogaKiddy Academy.",
+                "foto": "https://storage.tally.so/private/20221224_172201.jpg?id=LKpGBy&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkxLcEdCeSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.tmMUHBwHS1svnhptt-CFuEPxDcEWJRKK_A99IJYmrag&signature=bc8b68c6423aafd004b5c5118678ce2bf6acf9a237b747c6d85e6c3772c73748",
+                "redes": "yogakiddy",
+                "pais": "Chile",
+                "ciudad": "Viña Del Mar",
+                "edades": "1 a 99 años"
+            },
+            {
+                "submissionId": "Y5OoJZd",
+                "nombre": "Miriam Gladys Cancino Carreño",
+                "whatsapp": "+56994912146",
+                "bio": "Soy Miriam, vivo en viña del Mar. Soy mamá de 2 hijos Mauricio de 35 años y Gabriel de 31. Esposa de Patricio. Educadora de Párvulos y me desempeño en una escuela de la comuna de Puchuncavi con niños y niñas de 5 años. Me encanta la práctica de yoga personal y también practicar con mis alumnos y alumnas.",
+                "foto": "https://storage.tally.so/private/IMG_5233.jpeg?id=KLBNG8&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IktMQk5HOCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.cSp-Q5EZdt2T8SgjX89oW-95jMWD7f_NRdkrTgrU53A&signature=9b12caa4e078c585793d7d3fee3f8a01d55102b47b561238e43944459c56c20d",
+                "redes": "Miri.Cancino",
+                "pais": "Chile",
+                "ciudad": "Viña Del Mar Puchuncavi",
+                "edades": "5.0"
+            },
+            {
+                "submissionId": "6VGyGN",
+                "nombre": "Paulina Jara",
+                "whatsapp": "+56997890500",
+                "bio": "Hola ! Soy Psicóloga, Coach y Profesora de Yoga Infantil. Mamá de dos hijos únicos (11 y 1), me inicie en el yoga para poder apoyar a mi hijo mayor en sus problemas de manejo de ira y control de sus emociones. El yoga es una disciplina que me ha enseñado y desafiado constantemente para ser una mejor versión de mi misma, lo disfruto y es parte de lo que soy.",
+                "foto": "https://storage.tally.so/private/Foto-Pau.jpeg?id=d0dDNr&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQwZEROciIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.6Opk1lVWD0h7RDn-HDRa3R7eFHlkeMfOOcgxagVeWfE&signature=67ede35badc75a43a5e5c46f9254f464a8975e9832098b179a86c992b1f66724",
+                "redes": "https://www.linkedin.com/in/paulinajaragonzalez/",
+                "pais": "Chile",
+                "ciudad": "Ñuñoa",
+                "edades": "5 a 12 años"
+            },
+            {
+                "submissionId": "Gx1dAvz",
+                "nombre": "Susana Martín de la Sierra",
+                "whatsapp": "+34653852058",
+                "bio": "Soy maestra de Educación infantil en la escuela pública y he diseñado un programa de educación emocional basado en el yoga y el mindfulness , lo desarrollo cada día con mis alumnos y lo estamos implantando en todo el colegio. Se llama \"Metanoia\" y lo voy a publicar oficialmente ya que está dando muy buenos resultados.",
+                "foto": "https://storage.tally.so/private/94295CE3-6724-47DD-83BE-15402039CCDB.jpeg?id=dljkVA&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRsamtWQSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.g0sUBVC0tY88PnKdKLeFzH8o_9HCoRQGrXHLMktNBds&signature=1560888e1217e6a36a7ca751364a996c2e3814bbc9a813fc18b11fbd8dc2d231",
+                "redes": "https://www.facebook.com/share/1Ek6m4pjPA/?mibextid=wwXIfr",
+                "pais": "España",
+                "ciudad": "Argamasilla De Calatrava",
+                "edades": "3 a 6 años"
+            },
+            {
+                "submissionId": "5Bkr9zM",
+                "nombre": "Isabel Margarita Muñoz Molina",
+                "whatsapp": "+34695337735",
+                "bio": "Soy monitora de yoga infantil con una profunda pasión por el bienestar, el movimiento consciente y el desarrollo emocional de niños y niñas. A través del juego, la imaginación y la atención plena, acompaño a los pequeños en el descubrimiento de su cuerpo, su respiración y sus emociones, fomentando la calma, la autoestima y la conexión con ellos mismos. Formada en yoga para la infancia (YogaKiddy y otras formaciones complementarias), combino técnicas de yoga, mindfulness y dinámicas lúdicas adaptadas a cada etapa del desarrollo, creando clases seguras, creativas y llenas de alegría. Mi objetivo es que cada sesión sea una experiencia enriquecedora, donde los niños se sientan libres, respetados y felices, cultivando valores que les acompañen en su crecimiento.",
+                "foto": "https://storage.tally.so/private/1000155226.png?id=4LPZ2O&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRMUFoyTyIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.SoX94GjQV0phxoah_GmrpcLCyr_eULrXYiGIoRZt-Js&signature=7a045d8f0b57daad2a56f86bc1def027666fcb4285beb5ff06f171d69de9a54e",
+                "redes": "@margaritaalacabeza",
+                "pais": "España",
+                "ciudad": "Arico",
+                "edades": "5 a 7 años"
+            },
+            {
+                "submissionId": "2RW4DV",
+                "nombre": "Verónica Rodríguez Anchuela",
+                "whatsapp": "+34629546821",
+                "bio": "Soy de las que creen en el enorme potencial de los pequeños, y he comprobado su capacidad para conectar con el YOGA. Por ello es una herramienta que debemos brindarles cuanto antes mejor. ¡Te esperamos!",
+                "foto": "https://storage.tally.so/private/kurmayoga-V.JPG?id=qGANXY&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InFHQU5YWSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.Kj8PDBil_kWFu0lRoJDyo6iTD0wxmV4yR_xVJ8BdOwo&signature=ecdcaeaa630dd21cc052c0e95b6401438f9e3cff377c8ccfb3f015d03ea52b14",
+                "redes": "@kurmayoga.elrefugio",
+                "pais": "España",
+                "ciudad": "Cáceres",
+                "edades": "Para todas las edades"
+            },
+            {
+                "submissionId": "xgXyzv",
+                "nombre": "Andrea Alegría Del Pino",
+                "whatsapp": "+34695604006",
+                "bio": "Hola! Hola! Mi nombre es Andrea, me certifiqué en yoga y meditación infantil el año 2019, ya que quería activar factores protectores en infancias que formaban parte del programa en salud mental de la atención pública en Chile, así como contruibuir al desarrollo de habilidades personales. Me gusta pensar que infancias protegias y felices= adultos sanos/as. He podido cruzar mi profesión, la psicología con el yoga desde una perspectiva de género y derechos, desde entonces. He trabajado en el sistema de salud pública en Chile y actualmente vivo en España, por lo que me desempeño en escuelas con infancias y preadolescencias, articulando el yoga para abordar prevención de abuso sexual y a través de clases particulares. Sumado a lo anterior, soy docente de 2 cursos en la Universidad de Cádiz y tengo mi consulta online, donde acompaño procesos psicológicos de personas adultas. Cualquier consulta, por favor no dudes en contactarme. Gracias por leerme! Te envío un abrazo!",
+                "foto": "https://storage.tally.so/private/Foto-agenda.jpg?id=GpryBO&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkdwcnlCTyIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.a8gJSLC2wO7ttNJxOcfjEBt7E4fviENg4_Zx6i5hLsQ&signature=5812a8dc5e0da6dd39c620126c6f2c88d87efc86eb75b5f394f5bb9adec12e64",
+                "redes": "https://www.linkedin.com/in/andrea-alegria-del-pino-b5590418/",
+                "pais": "España",
+                "ciudad": "Cádiz",
+                "edades": "5 a 12 años"
+            },
+            {
+                "submissionId": "Gx1PpWk",
+                "nombre": "Ana Arelys Sarria Salazar",
+                "whatsapp": "+34651333248",
+                "bio": "Soy apasionada del yoga, amo la naturaleza , me encanta abrazar los árboles, respirar el aire marino, sentir como me acaricia la brisa. Soy simple Ana .",
+                "foto": "https://storage.tally.so/private/1000875425.webp?id=gLk11J&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImdMazExSiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.eI-bIJP_2IxyhljE2sn1GgeZBs6ZH4Z4jmWhgp73vi8&signature=001a054588675c9689efdb24324e855dd08c115905c83acbc095aef6e5cc1875",
+                "redes": "@sarriaana",
+                "pais": "España",
+                "ciudad": "Islas Canarias",
+                "edades": "47 años"
+            },
+            {
+                "submissionId": "NE0OKN",
+                "nombre": "Daniella Carniglia",
+                "whatsapp": "+34666685746",
+                "bio": "Soy Dani, psicóloga de profesión, con experiencia en el trabajo en educación e infancia. Mi sueño siempre ha sido aplicar la psicólogía desde un trabajo más práctico. Trabajando la conciencia corporal y emocional a través de dinámicas que favorezcan espacios de socialización entre los peques. Por eso decidí formarme como instructora de Yoga infantil en la academia YogaKiddy, además de otras formaciones complementarias y hoy me encuentro concretando mi proyecto en España, con Almendra Yoga Kids.",
+                "foto": "https://storage.tally.so/private/IMG_6632.jpg?id=2ALQYb&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJBTFFZYiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.2uWTPZo5i4NHzaXFzHKrAl3rfuQ3_JfZmavfoazDzys&signature=1d4aa5742c77ac0264067f8947649f8e02f239e85834b839692165cb4e2e0fef",
+                "redes": "@almendrayogakids",
+                "pais": "España",
+                "ciudad": "Madrid",
+                "edades": "3 a 12 años"
+            },
+            {
+                "submissionId": "PdE5Qe5",
+                "nombre": "Nuria",
+                "whatsapp": "+34660751275",
+                "bio": "Profesora de yoga y nfantil y adultos,con más de 20 años de experiencia.",
+                "foto": "",
+                "redes": "Yoganuramateos",
+                "pais": "España",
+                "ciudad": "Madrid, Las Rozas",
+                "edades": "A partir 10 años"
+            },
+            {
+                "submissionId": "XxGDBqP",
+                "nombre": "María José Sánchez Santamaría",
+                "whatsapp": "+34652226474",
+                "bio": "Maestra de infantil y psicóloga. Amante de la naturaleza y el sol.😀🌞",
+                "foto": "https://storage.tally.so/private/c0174caf-1757-47cb-a363-0f9dd247ce5b.jpeg?id=qOW7L2&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InFPVzdMMiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.AGNrFl3L5IYVNFPxezD3u3jALxlWc3EEKz62L7XOQcQ&signature=a76b1101affe2245d1a3b870c9045498120dbfaa51a5792fb32a5659b464269d",
+                "redes": "Sanchezsantamariamariajose en Instagram",
+                "pais": "España",
+                "ciudad": "Málaga",
+                "edades": "Infantil"
+            },
+            {
+                "submissionId": "KYo1jGg",
+                "nombre": "Miriam Rossel Riquelme",
+                "whatsapp": "+56965876286",
+                "bio": "Soy Terapeuta Ocupacional Infantil con formación en Integración sensorial y he encontrado en el yoga Infantil una herramienta muy versátil para acompañar a los niños y niñas en su proceso de desarrollo. Por ello, te invito a que podamos hablar y si te interes podemos ser un equipo para guiar a tu hijo(a) en esta aventura del yoga.",
+                "foto": "https://storage.tally.so/private/1000088275.jpg?id=eL2AQQ&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVMMkFRUSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.Nj054T0rLf56Moy1j8LW1IogvIbl-K15RUSQo4ckKMc&signature=96c1dfcc44e017391db4ee825fee13151c69c7f34f644a845ddba589e3558270",
+                "redes": "To.miriamrossel",
+                "pais": "España",
+                "ciudad": "Online",
+                "edades": "6 a 10 años"
+            },
+            {
+                "submissionId": "jaMQ8LR",
+                "nombre": "Xantal Laplana",
+                "whatsapp": "+34659097899",
+                "bio": "Hola,soy instructora de Hatha Yoga y entrenadora de la escritura para infancia, jóvenes y adultos/as. Tengo programas para mujeres,senior e infancia en yoga y escritura.",
+                "foto": "https://storage.tally.so/private/1000177056.jpg?id=8G8R6P&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhHOFI2UCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.OwZp_DLEgIgNFGrB-BZ_UkADqXOpKsUbutMOKE6pcvs&signature=b746e7256e856c8abc57698f1f9f08fe3b1aef11f5bc97f04e5c4b66c721d107",
+                "redes": "Instagram Yogasana.es y www.grafologiaypracticasocial.com",
+                "pais": "España",
+                "ciudad": "Online Y Presencial En Garachico, Tenerife",
+                "edades": "Desde 9 a 90"
+            },
+            {
+                "submissionId": "44kAVGb",
+                "nombre": "Joana",
+                "whatsapp": "+34624226015",
+                "bio": "Hola, Soy Juana Montaño, profesora en yoga para niños y adultos, certificado Yogakiddy y Certificado en Hatha Yoga adultos, España. Encantada en poder compartir mi experiencia y ayudaros en este bonito camino.",
+                "foto": "https://storage.tally.so/private/1000062400.jpg?id=XERRpL&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlhFUlJwTCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.Lo_dQwenuQwN6Etw4zoSa-imJapvEVv4Mj6y-YWysP0&signature=6d8d77102b4e1d9b76831ca7e57ff5a6a51a3024775b7b5d422ef9ff774d3c60",
+                "redes": "juanamontanogarcia.es",
+                "pais": "España",
+                "ciudad": "Salamanca",
+                "edades": "Para niños y adultos"
+            },
+            {
+                "submissionId": "J98Mv8K",
+                "nombre": "Yeimyn Moreno",
+                "whatsapp": "+34611013397",
+                "bio": "¡Hola y bienvenid@s a este espacio! Soy Yeimyn, instructora de yoga🧘🏽‍♀️. Yoga infantil formada en @yogakiddy. Creé esta cuenta, @dubayoga, con un propósito muy especial, crear un espacio donde acompañes a tu peque a descubrir el yoga de manera divertida, creativa y adaptada a su mundo💫.",
+                "foto": "https://storage.tally.so/private/YYH-2.jpg?id=DJpqeq&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkRKcHFlcSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.DzSBAcE92g3PHBrbKoSnRDf7-kb8fED5j732XU22P9M&signature=7874be029c224950d74647ef557eb1ce7fb2f15a6a34d2417048467c8cf42fe5",
+                "redes": "@dubayoga",
+                "pais": "España",
+                "ciudad": "Salamanca",
+                "edades": "3 a 12 años"
+            },
+            {
+                "submissionId": "eqAxGAO",
+                "nombre": "María García Pastor",
+                "whatsapp": "+34660985868",
+                "bio": "Soy María , mami de 2 peques e hice la formación con la idea de obtener herramientas para trabajar con mis peques y en Octubre voy a empezar clases de yoga para peques . Estoy muy feliz🫶",
+                "foto": "https://storage.tally.so/private/IMG_2440.jpeg?id=v4xddl&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InY0eGRkbCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.gPlu5Ly28XanoAxgHLnqfJCp38Dh8J3dIfwUapTAnGw&signature=e0176d65c5a4350fe50b567cc937052728012b0b480af26391bb8342e115a785",
+                "redes": "@mariaomyoguini",
+                "pais": "España",
+                "ciudad": "San Sebastián De Los Reyes, Madrid",
+                "edades": "3 a 12 años"
+            },
+            {
+                "submissionId": "vGO9W68",
+                "nombre": "Joana Yoga",
+                "whatsapp": "+33648674340",
+                "bio": "https://share.google/vjYmiq3TbzM6P5mIq",
+                "foto": "",
+                "redes": "https://m.facebook.com/61555528935081/",
+                "pais": "Francia",
+                "ciudad": "Montpellier Métropole",
+                "edades": "Prénatal a mamans & bébés a 12 mois à adultes"
+            },
+            {
+                "submissionId": "68a1v4N",
+                "nombre": "Nuria Casas",
+                "whatsapp": "+525513222263",
+                "bio": "Soy monitora de yoga, musimotricidad y psicomotricidad y estimulación temprana.",
+                "foto": "https://storage.tally.so/private/IMG_2861.png?id=OoKrkg&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ik9vS3JrZyIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.RmRBgTA13S64JtDzPn74qWHWQks8X0Mz1aXA9WQm2hQ&signature=ef22017cec854f8283e2249da7d66b6577477ae9a4008dd0cfae9cffb395ae52",
+                "redes": "Casas NURITA",
+                "pais": "México",
+                "ciudad": "CDMX, Tlalpan",
+                "edades": "3 a 7 años"
+            },
+            {
+                "submissionId": "zbALDg",
+                "nombre": "Patricia Maytorena Rico",
+                "whatsapp": "+522222152908",
+                "bio": "Me llamo Patricia y practico yoga desde hace 20 años. Estoy certificada en Kundalini Yoga y en YogaKiddy. Disfruto mucho impartiendo clases de yoga a niños y adultos, al estar consciente de todos los beneficios que recibirán con su practica.",
+                "foto": "https://storage.tally.so/private/IMG_7545.jpg?id=qGVv9d&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InFHVnY5ZCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.eGULIlT30UgpSJxXUVGsUVep2TH8WXqlAJ2BoMAlUVY&signature=b8002e4bf2aa0f0ecc97caef25cbac35412e29c8228073132a854f5cc98ccd68",
+                "redes": "Paty MaytoRico",
+                "pais": "México",
+                "ciudad": "San Pedro Cholula",
+                "edades": "Niños 3 a 8 años y adultos"
+            },
+            {
+                "submissionId": "Ek1WMyA",
+                "nombre": "Maria de Monserrat Palacios Dominguez",
+                "whatsapp": "+522288556456",
+                "bio": "Entrenamiento de gimnasia rítmica y certificado en yoga infantil",
+                "foto": "https://storage.tally.so/private/IMG_1127.jpeg?id=BZDkk4&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkJaRGtrNCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.CSvY0MOM1RyES6gESf9si2FKI5FyAEwncTkppPnmRE0&signature=be8219546abc5bb4c0e96d6052ab0764441f56ee0eeeeafa41d365de4b288d91",
+                "redes": "Monserrat Palacios",
+                "pais": "México",
+                "ciudad": "Xalapa, Veracruz",
+                "edades": "Desde los 5 años en adelante"
+            },
+            {
+                "submissionId": "q4BBJb8",
+                "nombre": "Regina Rojas Sánchez",
+                "whatsapp": "+525523346439",
+                "bio": "Mexicana, 48 años, Mtra de Preescolar, Enamorada de Alex",
+                "foto": "",
+                "redes": "Regina Rojas",
+                "pais": "México",
+                "ciudad": "CDMX",
+                "edades": "3 a 6 años"
+            },
+            {
+                "submissionId": "zxdV4Aq",
+                "nombre": "Fabiola Arteaga",
+                "whatsapp": "+525520666175",
+                "bio": "Fabiola Arteaga Maestra de certificada de Yoga, monitora de YOGA INFANTIL CERITIFICADA, terapeuta de Sonido . Apasionada por acompañar a los niños en su camino de autodescubrimiento a través del movimiento , la respiración , la creatividad, la mirada profunda para ver la magia del momento presente . Creo profundamente en el poder transformador del yoga como herramienta para cultivar la consciencia corporal emocional y espiritual desde la infancia . Mi misión es sembrar semillas de autoconocimiento , de amor, autocuidado y bienestar; guiando a las infancias a conectar con su magia",
+                "foto": "https://storage.tally.so/private/DSC05851.jpeg?id=RB16eQ&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlJCMTZlUSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.IyL4vXSRpe1SQkgLmtcxV_vIcWNoGJyxFZStIEfaDJE&signature=7dfcb79a7aa7d04747056547bd0595d04b3dfe44001e4134e8b436ad3407c1ad",
+                "redes": "Faby.yoguini",
+                "pais": "México",
+                "ciudad": "CDMX Sur",
+                "edades": "4 a 10 años"
+            },
+            {
+                "submissionId": "ZjV6voy",
+                "nombre": "Adriana Martínez Luna",
+                "whatsapp": "+525524982044",
+                "bio": "Tengo 10 años impartiendo clases de yoga a niños y yoga en familia. Mi objetivo es que en momentos difíciles los niños y las familias vivan el proceso con amor. 🙏🏼🕉🍀🧘🏼‍♀️👨‍👩‍👧‍👦🥰😍❤️🩷💜🤍🌟🌈",
+                "foto": "https://storage.tally.so/private/e7f3913f-7e1b-4ada-b2a6-b3ce95aef9c2-1_all_41627.jpg?id=x2y90E&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IngyeTkwRSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.pSU6MPdAq_fyDT8QB6oINGQJpA3iqYO-E6e6zEQuTqA&signature=f41afcfb3c42193d0fa9c61c8b4fb3f71d5de7bd4890acad4995891a01f469b1",
+                "redes": "Lunita Adri",
+                "pais": "México",
+                "ciudad": "Estado De México Tlalnepantla Naucalpan",
+                "edades": "Niños 3 a 12 años y Niños con papás"
+            },
+            {
+                "submissionId": "Gx1JJE2",
+                "nombre": "Dhiana Suárez",
+                "whatsapp": "+523335787261",
+                "bio": "*Instructora certificada Yoga Kiddy Anusara Yoga, Kundalini & Yoga Terapéutico y Restaurativo. Empresarial * Meditación * Psicoterapeuta Transpersonal y Gestalt * Barras de Access Consciousness",
+                "foto": "https://storage.tally.so/private/edit-7651b.jpeg?id=qOEB78&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InFPRUI3OCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.jJ4zTJ0BHP_RR2mHJAdiZW8FOWWb06GiQIRDRHwuazo&signature=8ae923a9262ecb732d80fed9470abbb70f6d58a900ebbb83d8932e629b94efaf",
+                "redes": "Vive_simplemx",
+                "pais": "México",
+                "ciudad": "Guadalajara, Jalisco",
+                "edades": "4 a 90 años"
+            },
+            {
+                "submissionId": "G4OMbe",
+                "nombre": "Diana Franco Valdez",
+                "whatsapp": "+529531392809",
+                "bio": "Soy Diana Franco Valdez, nací y crecí en la Ciudad de México, estudié la licenciatura en Contaduría Pública en el IPN, desde hace 15 años radico en la ciudad de Huajuapan de León, Oaxaca, soy lectora desde 1996 y animalera desde el año 2009. • Practicante de Kundalini Yoga desde el año 2013 a la fecha. • Practicante de Hatha y Vinyasa Yoga desde 2019 a la fecha. • Certificada como Monitora de yoga para niñas y niños, Yoga Kiddy Academy, 2020 • Certificada como Educadora emocional Yogi Minds for Kids, Sadhak Yoga Institute 100 hrs., Yoga Alliance, 2021 • Certificada como Promotora de Desarrollo Infantil, Fundación Carlos Slim, 2020",
+                "foto": "https://storage.tally.so/private/Foto_CIY.jpg?id=kN6MKM&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImtONk1LTSIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.3fHWnyLzWZG1r0yWj9ds-z8gOccxDrUcr8srrOicr7U&signature=db3ebb393fcd25cd3b2f93b9945428d89997b5493f1ba320b31b8148a030a368",
+                "redes": "@yoga_circuloinfantil",
+                "pais": "México",
+                "ciudad": "Huajuapan De León, Oaxaca",
+                "edades": "4 a 12 años"
+            },
+            {
+                "submissionId": "dWP1PZD",
+                "nombre": "Claudia Pech Oy",
+                "whatsapp": "+529993896182",
+                "bio": "Lic. en Psicóloga con maestría en Psicoterapia con familias y parejas, con 10 años de experiencia acompañando a niñas, niños, adolescentes y mujeres adultas que han vivido situaciones de violencia. Brindo acompañamiento individual y grupal desde el enfoque de derechos humanos, con perspectiva de género y cultura de paz. Imparto talleres a niñas, niños y adolescentes de diversos temas, entre estos el mindfulness, yoga, habilidades socioemocionales y más.",
+                "foto": "https://storage.tally.so/private/IMG_20250625_141520.jpg?id=rVQr52&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InJWUXI1MiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.QMxMyO3C6rcuCVLIhN-U55MSN9fxQuzmZ3TnfZbVVck&signature=328deda76af349120e87dffd7055652c189fe1fb94e539c9dd993cf96c31c757",
+                "redes": "Comunidad del buen trato - Entrelazando sabereshttps://www.facebook.com/share/18QcM7cBJB/",
+                "pais": "México",
+                "ciudad": "Mérida, Yucatán",
+                "edades": "4 a 10 años"
+            },
+            {
+                "submissionId": "A78KXbD",
+                "nombre": "Alma Delia Gil Hernández",
+                "whatsapp": "+522213759546",
+                "bio": "Soy Mamá de 2 pequeños no tan pequeños en la pandemia a mi hijo mayor le afecto mucho el estar en casa así que busque opciones de poder apoyarle a transitar este proceso de una forma amigable que no solo incluía movimiento sino reconociendo sus emociones así que también tome la formación de las emociones vuelven al colegio.",
+                "foto": "",
+                "redes": "@ramyf_baby",
+                "pais": "México",
+                "ciudad": "Puebla De Zaragoza",
+                "edades": "5 a 12 años"
+            },
+            {
+                "submissionId": "0QMo7M9",
+                "nombre": "Lucia Ivòn Avena Cruz",
+                "whatsapp": "+524422390362",
+                "bio": "Hola actualmente doy clases de Yoga a niños desde maternal de casi 2 años hasta niños de 6° grado de primaria entre 12 y 13 años. Empece mi camino con el apoyo de Yogakiddy, actualmente imparto clases en preescolar y primaria en un colegio que tiene en su plan escolar las clases de yoga. Agradecida con ustedes y con mis alumnos. Ha sido una experiencia fabulosa.NAMASTE",
+                "foto": "",
+                "redes": "namasteluciaivon",
+                "pais": "México",
+                "ciudad": "Querétaro, Querétaro",
+                "edades": "Maternal 2 añitos hasra 12 años,"
+            },
+            {
+                "submissionId": "2R0VLM",
+                "nombre": "Stephanie Perez Mitre",
+                "whatsapp": "+523111371183",
+                "bio": "Hola! Soy Stephanie Perez, instructora de yoga kundalini, yoga Kids, aeroyoga y yoga prenatal. Alumna eterna de la vida. Soy una persona que disfruta de las pequeñas grandes cosas de la vida como el contacto con la naturaleza, las risas, los colores, la música, la infancia.",
+                "foto": "https://storage.tally.so/private/8081A38A-6253-448D-82C8-9EF2B5F828D4.jpeg?id=y46vRX&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ink0NnZSWCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.kx14_VwVclK2nlEzi-qV8E4wP3LFdTxnYdpSsWv9h4w&signature=18c6b1daeeacc134233c2233cdd67daac99b78313ecf6904f95a83481998a783",
+                "redes": "Adiyogui",
+                "pais": "México",
+                "ciudad": "Tepic",
+                "edades": "3 a 100"
+            },
+            {
+                "submissionId": "jE88b1",
+                "nombre": "Nuria Camps",
+                "whatsapp": "+51969372221",
+                "bio": "Soy Nuria, mamá, bachiller en psicología, profesional comprometida, responsable, especialista en mindfulness y yoga. Mi objetivo es empoderar a las personas, utilizando un enfoque holístico, para que encuentren el equilibrio y la serenidad en sus vidas , teniendo en cuenta las necesidades individuales de cada ser. Formo parte del equipo de Yoga4SpecialNeeds",
+                "foto": "https://storage.tally.so/private/IMG_8380.jpeg?id=591XKP&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MVhLUCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.X6GML5xYvctMqNniAfyuMgx-dIX52xHVOLXbXK-Uwb8&signature=088f40e40170e155cb97c444d10c918ef9d5499d29f71382b80c48c0abfed37e",
+                "redes": "nuria_camps_r",
+                "pais": "Perú",
+                "ciudad": "Lima",
+                "edades": "niños, jóvenes y adultos (inclusivo y accesible)"
+            },
+            {
+                "submissionId": "gDLL9LJ",
+                "nombre": "Randy Camacho Eng",
+                "whatsapp": "+18587335033",
+                "bio": "Hola! Tengo muchas ganas de apoyarte en el crecimiento sano de tu chiquitin!!",
+                "foto": "https://storage.tally.so/private/IMG_0745.jpeg?id=yxLdQ6&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Inl4TGRRNiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.KK5aE12Gzl6N9nONLyixBlcK8ze3cJ_OZp8YlWJUduQ&signature=0215618bb58256b605bb74885920b39e5abd46e4e4cbc546a25180c635a50206",
+                "redes": "somosimperfectosoficial",
+                "pais": "Estados Unidos",
+                "ciudad": "Maplewood, MO",
+                "edades": "3 a 12 años"
+            },
+            {
+                "submissionId": "x6EzGo",
+                "nombre": "Ana Hoffmann",
+                "whatsapp": "+59891725540",
+                "bio": "Aprendiendo yoga desde 2003 🙏",
+                "foto": "https://storage.tally.so/private/IMG_2759.jpeg?id=RoPYdj&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlJvUFlkaiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.R_Ypa7Sr-p4PUQEEM_nCQ5JvYmJn4ikmxLeKIYBAZ4c&signature=03b4846e917d1e9d34ec76fd47524dd4422c5bb1be2a19e091cfa8b447c494dd",
+                "redes": "@yogalife_uy",
+                "pais": "Uruguay",
+                "ciudad": "Montevideo",
+                "edades": "Todas"
+            },
+            {
+                "submissionId": "VLlJBda",
+                "nombre": "Graciela Bilat",
+                "whatsapp": "+59898886664",
+                "bio": "Soy maestra de educación primaria y me gusta mucho trabajar con niños.",
+                "foto": "https://storage.tally.so/private/1000099589.jpg?id=4Lv8VB&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRMdjhWQiIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.ZRvEEGESy42L6OWb7jOHnYtRtf_iwQ089EXhzJq48Rs&signature=abb826a20bb1fd235314260f9f072b0b754ebb5015896021635f9210d0624302",
+                "redes": "@gmail.com",
+                "pais": "Uruguay",
+                "ciudad": "Montevideo",
+                "edades": "6 a 11 años"
+            },
+            {
+                "submissionId": "kr44LZ",
+                "nombre": "Juan Pablo Reymundez",
+                "whatsapp": "+59892861256",
+                "bio": "Clases de yoga para niños en Montevideo y Maldonado - Uruguay",
+                "foto": "",
+                "redes": "@sanandoelcamino",
+                "pais": "Uruguay",
+                "ciudad": "Montevideo",
+                "edades": "A partir 6 años"
+            },
+            {
+                "submissionId": "2EkPZjj",
+                "nombre": "Daniela Villegas",
+                "whatsapp": "+59891438298",
+                "bio": "Soy docente hace 27 años, directora rural hace 5 y el yoga, su práctica y filosofía es una manera de vivir en paz en el frenético mundo que hoy es nuestro Por esa razón es que con esfuerzo y dedicación estoy cursando el profesorado en este hermoso grupo y he llevado al aula aprendizajes que voy procesando y es maravilloso lo que se puede lograr, paz, felicidad y aprendizaje significativo.",
+                "foto": "https://storage.tally.so/private/Screenshot_20250523-234129.png?id=D5DdLl&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkQ1RGRMbCIsImZvcm1JZCI6Im1KME1QWSIsImlhdCI6MTc3MzQ1MDM0NX0.-XsQNmve3hlurQ2EB5aLkFzggGuClrxrmL8hDKn193M&signature=79929e4c140291c3b865f46511628a65af8bb91f59cec2d7ba5bb6f382a9741e",
+                "redes": "Danielamarisolvillegas",
+                "pais": "Uruguay",
+                "ciudad": "Salto",
+                "edades": "3 a 12 años"
+            }
+        ]
+    </script>
+    <script src="./js/profesores-data.js"></script>
+    <script src="./js/render-profesores.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initProfesores({
+                gridId: 'profesores-grid',
+                emptyStateId: 'empty-state',
+                filterContainerId: 'country-filters',
+                filterCountry: 'all',
+                filtersEnabled: true,
+                redirectMode: true,
+                showCountryCardsOnAll: true
+            });
+        });
+    </script>
+</body>
+
+</html>
