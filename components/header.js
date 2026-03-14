@@ -7,6 +7,29 @@ class YogaHeader extends HTMLElement {
         this.render();
         this.setupMobileMenu();
         this.setupTopBar();
+        this.setupHeaderScrollToggle();
+    }
+
+    setupHeaderScrollToggle() {
+        const header = this.querySelector('.site-header');
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (currentScrollY > lastScrollY && currentScrollY > 130) {
+                        header.classList.add('hidden-nav');
+                    } else if (currentScrollY < lastScrollY - 5) {
+                        header.classList.remove('hidden-nav');
+                    }
+                    lastScrollY = currentScrollY;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
     }
 
     setupTopBar() {
@@ -214,7 +237,13 @@ class YogaHeader extends HTMLElement {
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
                 border-bottom: 1px solid rgba(0,0,0,0.04);
-                transition: box-shadow 0.3s ease;
+                transition: transform 0.25s ease, box-shadow 0.3s ease, opacity 0.25s ease;
+                transform: translateY(0);
+            }
+
+            .site-header.hidden-nav {
+                transform: translateY(-110%);
+                opacity: 0;
             }
 
             .site-nav {
