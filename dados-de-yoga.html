@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Dados de Yoga | YogaKiddy</title>
+    <meta name="description" content="Lanza nuestros dados de yoga en español. ¡Combina posturas y desafíos divertidos para hacer de cada clase una aventura!">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="components/header.js" defer></script>
+    <script src="components/footer.js" defer></script>
+    <style>
+        .dice-section {
+            padding: 4rem 1rem 6rem;
+            text-align: center;
+            background-color: #fafafa;
+            min-height: 60vh;
+        }
+        
+        .dice-container {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            flex-wrap: wrap;
+            margin: 3rem auto;
+            perspective: 1200px;
+        }
+
+        .dice-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .dice-title {
+            font-family: var(--font-heading, 'Quicksand', sans-serif);
+            font-size: 1.5rem;
+            color: #2c3b2b;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .dice {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 3s cubic-bezier(0.1, 0.8, 0.2, 1);
+            transform: rotateX(-15deg) rotateY(15deg); /* Initial slight tilt */
+        }
+
+        .face {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: #fff;
+            border: 4px solid #f6efe9;
+            border-radius: 20px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.05), 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading, 'Quicksand', sans-serif);
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            backface-visibility: hidden;
+        }
+
+        .face-emoji {
+            font-size: 3rem;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        .face-text {
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+
+        /* 3D Positioning of the faces */
+        /* Front = 1, Right = 2, Top = 3, Bottom = 4, Left = 5, Back = 6 */
+        .face-1 { transform: translateZ(75px); }
+        .face-2 { transform: rotateY(90deg) translateZ(75px); }
+        .face-3 { transform: rotateX(90deg) translateZ(75px); }
+        .face-4 { transform: rotateX(-90deg) translateZ(75px); }
+        .face-5 { transform: rotateY(-90deg) translateZ(75px); }
+        .face-6 { transform: rotateY(180deg) translateZ(75px); }
+        
+        /* Pastel background variations for faces */
+        .dice-posturas .face { background-color: #E2F0CB; }
+        .dice-desafios .face { background-color: #BAE1FF; }
+
+        .btn-roll {
+            margin-top: 3rem;
+            background-color: #e8956b;
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(232, 149, 107, 0.4);
+        }
+        
+        .btn-roll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(232, 149, 107, 0.5);
+            background-color: #e08456;
+        }
+        
+        .btn-roll:active {
+            transform: translateY(0);
+        }
+
+        .result-box {
+            margin-top: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .result-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .result-text {
+            font-size: 1.5rem;
+            color: #555;
+            line-height: 1.5;
+            font-family: var(--font-heading, 'Quicksand', sans-serif);
+        }
+
+        .result-highlight {
+            color: #2c3b2b;
+            font-weight: 700;
+            font-size: 1.8rem;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .page-header {
+            background-color: #f6efe9;
+            padding: 6rem 1rem 3rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .dice-container {
+                gap: 3rem;
+                flex-direction: column;
+                align-items: center;
+            }
+            .dice {
+                width: 120px;
+                height: 120px;
+            }
+            .face {
+                width: 120px;
+                height: 120px;
+            }
+            .face-1 { transform: translateZ(60px); }
+            .face-2 { transform: rotateY(90deg) translateZ(60px); }
+            .face-3 { transform: rotateX(90deg) translateZ(60px); }
+            .face-4 { transform: rotateX(-90deg) translateZ(60px); }
+            .face-5 { transform: rotateY(-90deg) translateZ(60px); }
+            .face-6 { transform: rotateY(180deg) translateZ(60px); }
+            .face-emoji { font-size: 2.2rem; }
+            .face-text { font-size: 0.95rem; }
+            .result-text { font-size: 1.2rem; }
+            .result-highlight { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <yk-header></yk-header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="pill-badge" style="background-color: white;">Jugamos</span>
+                <h1 style="margin-top: 1rem;">Dados de Yoga</h1>
+                <p style="font-size: 1.2rem; max-width: 600px; margin: 1rem auto 0; color: #555;">
+                    Agrega un elemento sorpresa a tu clase. Lanza los dados y descubre qué postura realizar y el desafío especial que debes cumplir.
+                </p>
+            </div>
+        </section>
+
+        <section class="dice-section">
+            <div class="container">
+                <div class="dice-container">
+                    
+                    <!-- Dado 1: Posturas -->
+                    <div class="dice-wrapper">
+                        <div class="dice-title">Dado de Posturas</div>
+                        <div class="dice dice-posturas" id="dice1">
+                            <!-- Faces will be injected by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Dado 2: Desafíos -->
+                    <div class="dice-wrapper">
+                        <div class="dice-title">Dado de Desafíos</div>
+                        <div class="dice dice-desafios" id="dice2">
+                            <!-- Faces will be injected by JS -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="btn-roll" id="btn-roll">Lanzar los Dados</button>
+
+                <div class="result-box" id="result-box">
+                    <p class="result-text">
+                        ¡Haz la postura de<br>
+                        <span class="result-highlight" id="res-postura">___</span><br>
+                        <span id="res-conexion">mientras lo haces</span><br>
+                        <span class="result-highlight" id="res-desafio" style="color: #e8956b;">___</span>!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <yk-footer></yk-footer>
+
+    <script>
+        // Definición de las caras
+        // Índices de caras 3D: 0=Front, 1=Right, 2=Top, 3=Bottom, 4=Left, 5=Back
+        const posturas = [
+            { name: 'Perro', emoji: '🐶', html: 'Perro' },            // Face 1 (Front)
+            { name: 'Gato', emoji: '🐱', html: 'Gato' },              // Face 2 (Right)
+            { name: 'Rana', emoji: '🐸', html: 'Rana' },              // Face 3 (Top)
+            { name: 'Árbol', emoji: '🌳', html: 'Árbol' },            // Face 4 (Bottom)
+            { name: 'Serpiente', emoji: '🐍', html: 'Serpiente' },    // Face 5 (Left)
+            { name: 'Mariposa', emoji: '🦋', html: 'Mariposa' }       // Face 6 (Back)
+        ];
+
+        const desafios = [
+            { name: 'con los ojos cerrados', emoji: '🙈', html: 'Ojos<br>Cerrados' },
+            { name: 'en cámara lenta', emoji: '🐢', html: 'Cámara<br>Lenta' },
+            { name: 'con una gran sonrisa', emoji: '😊', html: 'Gran<br>Sonrisa' },
+            { name: 'respirando profundo', emoji: '🌬️', html: 'Resp.<br>Profunda' },
+            { name: 'haciendo su sonido', emoji: '🔊', html: 'Sonido<br>Divertido' },
+            { name: 'fijos como estatua', emoji: '🗿', html: 'Como<br>Estatua' }
+        ];
+
+        // Mapeo de la cara ganadora hacia su rotación final necesaria (para que quede apuntando al frente)
+        const faceRotations = [
+            { rx: 0, ry: 0 },       // 0 -> Front
+            { rx: 0, ry: -90 },     // 1 -> Right
+            { rx: -90, ry: 0 },     // 2 -> Top
+            { rx: 90, ry: 0 },      // 3 -> Bottom
+            { rx: 0, ry: 90 },      // 4 -> Left
+            { rx: 0, ry: 180 }      // 5 -> Back
+        ];
+
+        function createFaces(diceElement, dataArray) {
+            let html = '';
+            for(let i=0; i<6; i++) {
+                html += `
+                    <div class="face face-${i+1}">
+                        <div class="face-emoji">${dataArray[i].emoji}</div>
+                        <div class="face-text">${dataArray[i].html}</div>
+                    </div>
+                `;
+            }
+            diceElement.innerHTML = html;
+        }
+
+        const dice1 = document.getElementById('dice1');
+        const dice2 = document.getElementById('dice2');
+        const btnRoll = document.getElementById('btn-roll');
+        const resultBox = document.getElementById('result-box');
+        const resPostura = document.getElementById('res-postura');
+        const resDesafio = document.getElementById('res-desafio');
+        const resConexion = document.getElementById('res-conexion');
+
+        // Variables para llevar el conteo acumulado de rotaciones y que el dado gire siempre "hacia adelante"
+        let currentRotX1 = -15; let currentRotY1 = 15;
+        let currentRotX2 = -15; let currentRotY2 = 15;
+        let isRolling = false;
+
+        createFaces(dice1, posturas);
+        createFaces(dice2, desafios);
+
+        function rollDice() {
+            if(isRolling) return;
+            isRolling = true;
+            resultBox.classList.remove('show');
+
+            // Elegir caras aleatorias (0 a 5)
+            const randomFace1 = Math.floor(Math.random() * 6);
+            const randomFace2 = Math.floor(Math.random() * 6);
+
+            // Obtener rotación base de la cara para quedar al frente
+            const baseRot1 = faceRotations[randomFace1];
+            const baseRot2 = faceRotations[randomFace2];
+
+            // Añadir múltiples giros de 360 grados (entre 4 y 6 giros extras)
+            const extraSpinsX1 = Math.floor(Math.random() * 3) + 4;
+            const extraSpinsY1 = Math.floor(Math.random() * 3) + 4;
+            const extraSpinsX2 = Math.floor(Math.random() * 3) + 4;
+            const extraSpinsY2 = Math.floor(Math.random() * 3) + 4;
+
+            // Para asegurar una interpolación continua sin saltos, redondeamos currentRot al múltiplo de 360 más cercano
+            // y luego calculamos la meta final.
+            const nextRotX1 = baseRot1.rx + (extraSpinsX1 * 360) + (Math.round(currentRotX1/360)*360);
+            const nextRotY1 = baseRot1.ry + (extraSpinsY1 * 360) + (Math.round(currentRotY1/360)*360);
+            
+            const nextRotX2 = baseRot2.rx + (extraSpinsX2 * 360) + (Math.round(currentRotX2/360)*360);
+            const nextRotY2 = baseRot2.ry + (extraSpinsY2 * 360) + (Math.round(currentRotY2/360)*360);
+
+            // Aplicar la rotación final en CSS
+            dice1.style.transform = `rotateX(${nextRotX1}deg) rotateY(${nextRotY1}deg)`;
+            dice2.style.transform = `rotateX(${nextRotX2}deg) rotateY(${nextRotY2}deg)`;
+
+            // Guardar para el siguiente tiro
+            currentRotX1 = nextRotX1; currentRotY1 = nextRotY1;
+            currentRotX2 = nextRotX2; currentRotY2 = nextRotY2;
+
+            // Esperar que termine la animación (3 segundos marcados en CSS)
+            setTimeout(() => {
+                isRolling = false;
+                
+                // Mostrar resultados
+                resPostura.textContent = `el ${posturas[randomFace1].emoji} ${posturas[randomFace1].name.toUpperCase()}`;
+                
+                // Ajustar conectores según género/número
+                if(randomFace1 === 2 || randomFace1 === 4 || randomFace1 === 5) {
+                    // Rana, Serpiente, Mariposa
+                    resPostura.textContent = `la ${posturas[randomFace1].emoji} ${posturas[randomFace1].name.toUpperCase()}`;
+                }
+
+                resDesafio.textContent = desafios[randomFace2].name.toUpperCase();
+                
+                resultBox.classList.add('show');
+            }, 3000);
+        }
+
+        btnRoll.addEventListener('click', rollDice);
+
+    </script>
+</body>
+
+</html>
