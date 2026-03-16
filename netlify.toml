@@ -30,12 +30,12 @@
 [[redirects]]
   from = "/blog"
   to = "/blog.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/blog/"
   to = "/blog.html"
-  status = 200
+  status = 301
 
 # Formations principales
 [[redirects]]
@@ -106,5 +106,5 @@
 # Catch-all : toute ancienne URL non matchée → homepage (soft 301)
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "/"
+  status = 301
