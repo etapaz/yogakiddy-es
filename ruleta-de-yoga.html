@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Ruleta de Yoga | YogaKiddy</title>
+    <meta name="description" content="Diviértete con nuestras ruletas de yoga online. ¡Gira y descubre nuevas etapas, ambientes y conceptos!">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="components/header.js" defer></script>
+    <script src="components/footer.js" defer></script>
+    <style>
+        .wheel-section {
+            padding: 4rem 1rem;
+            text-align: center;
+            background-color: #fafafa;
+        }
+        .wheels-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .wheel-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .wheel-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #2c3b2b;
+        }
+        .wheel-wrapper {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            margin: 2rem auto;
+        }
+        .wheel-canvas {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            border: 6px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .wheel-pointer {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 36px;
+            height: 44px;
+            background-color: #e8956b;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+            z-index: 10;
+        }
+        .wheel-result {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            min-height: 4rem;
+            margin-top: 1rem;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.5s ease;
+            font-family: var(--font-heading, 'Quicksand', sans-serif);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.2;
+        }
+        .wheel-result.show-result {
+            opacity: 1;
+            transform: scale(1);
+            color: #e8956b;
+        }
+        .btn-spin {
+            margin-top: 1.5rem;
+            background-color: #2c3b2b;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-spin:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(44, 59, 43, 0.3);
+        }
+        .btn-spin:active {
+            transform: translateY(0);
+        }
+        .page-header {
+            background-color: #f6efe9;
+            padding: 6rem 1rem 3rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .wheel-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+            .wheel-result {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <yk-header></yk-header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="pill-badge" style="background-color: white;">Jugamos</span>
+                <h1 style="margin-top: 1rem;">Ruleta de Yoga</h1>
+                <p style="font-size: 1.2rem; max-width: 600px; margin: 1rem auto 0; color: #555;">
+                    Gira las ruletas para elegir las distintas etapas de tu clase, el ambiente que te acompañará y los conceptos para practicar tus posturas. ¡Haz que cada sesión sea una aventura nueva!
+                </p>
+            </div>
+        </section>
+
+        <section class="wheel-section">
+            <div class="wheels-container">
+                <!-- Ruleta 1: Conceptos / Activación -->
+                <div class="wheel-card">
+                    <h2>Etapas de la Clase</h2>
+                    <div class="wheel-wrapper">
+                        <div class="wheel-pointer"></div>
+                        <canvas id="wheel-etapas" class="wheel-canvas" width="600" height="600"></canvas>
+                    </div>
+                    <button class="btn-spin" id="btn-etapas">Girar Ruleta</button>
+                    <div class="wheel-result" id="res-etapas"></div>
+                </div>
+
+                <!-- Ruleta 2: Ambientes -->
+                <div class="wheel-card">
+                    <h2>Ambientes</h2>
+                    <div class="wheel-wrapper">
+                        <div class="wheel-pointer"></div>
+                        <canvas id="wheel-ambientes" class="wheel-canvas" width="600" height="600"></canvas>
+                    </div>
+                    <button class="btn-spin" id="btn-ambientes">Girar Ruleta</button>
+                    <div class="wheel-result" id="res-ambientes"></div>
+                </div>
+
+                <!-- Ruleta 3: Conceptos -->
+                <div class="wheel-card">
+                    <h2>Conceptos</h2>
+                    <div class="wheel-wrapper">
+                        <div class="wheel-pointer"></div>
+                        <canvas id="wheel-conceptos" class="wheel-canvas" width="600" height="600"></canvas>
+                    </div>
+                    <button class="btn-spin" id="btn-conceptos">Girar Ruleta</button>
+                    <div class="wheel-result" id="res-conceptos"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <yk-footer></yk-footer>
+
+    <script>
+        class YogaWheel {
+            constructor(canvasId, items, resultId, btnId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                this.items = items;
+                this.resultDiv = document.getElementById(resultId);
+                this.btn = document.getElementById(btnId);
+                
+                // Beautiful pastel colors suitable for yoga site
+                this.colors = ['#FFD1DC', '#FFDFBA', '#FFFFBA', '#BAFFC9', '#BAE1FF', '#E8BAFF', '#FFB3BA', '#C4FAF8', '#E2F0CB', '#FFDAC1'];
+                
+                this.currentRotation = 0;
+                this.isSpinning = false;
+                
+                // Draw after fonts load to ensure correct metrics
+                if (document.fonts) {
+                    document.fonts.ready.then(() => this.draw());
+                }
+                // Fallback draw
+                this.draw();
+                
+                this.btn.addEventListener('click', () => this.spin());
+            }
+            
+            draw() {
+                const radius = this.canvas.width / 2;
+                const arc = 2 * Math.PI / this.items.length;
+                
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                for (let i = 0; i < this.items.length; i++) {
+                    const angle = i * arc;
+                    
+                    // Draw slice
+                    this.ctx.beginPath();
+                    this.ctx.fillStyle = this.colors[i % this.colors.length];
+                    this.ctx.moveTo(radius, radius);
+                    this.ctx.arc(radius, radius, radius, angle, angle + arc);
+                    this.ctx.fill();
+                    
+                    // Draw separator lines
+                    this.ctx.save();
+                    this.ctx.lineWidth = 4;
+                    this.ctx.strokeStyle = "#ffffff";
+                    this.ctx.moveTo(radius, radius);
+                    this.ctx.lineTo(radius + Math.cos(angle) * radius, radius + Math.sin(angle) * radius);
+                    this.ctx.stroke();
+                    this.ctx.restore();
+                    
+                    // Draw text
+                    this.ctx.save();
+                    this.ctx.translate(radius, radius);
+                    this.ctx.rotate(angle + arc / 2);
+                    this.ctx.textAlign = "right";
+                    this.ctx.textBaseline = "middle";
+                    this.ctx.fillStyle = "#333333";
+                    
+                    // Adjust font size based on segment density
+                    const fontSize = this.items.length > 8 ? 26 : 30;
+                    this.ctx.font = `bold ${fontSize}px 'Quicksand', sans-serif`;
+                    
+                    // Constrain text to fit inside the slice (radius - text_padding)
+                    this.ctx.fillText(this.items[i], radius - 35, 0, radius - 80);
+                    this.ctx.restore();
+                }
+            }
+            
+            spin() {
+                if (this.isSpinning) return;
+                this.isSpinning = true;
+                
+                // Reset result classes
+                this.resultDiv.classList.remove('show-result');
+                this.resultDiv.textContent = '';
+                
+                // Add between 5 and 10 full rotations plus a random offset
+                const spins = Math.floor(Math.random() * 5) + 5; 
+                const randomDegree = Math.floor(Math.random() * 360);
+                const totalDegree = (spins * 360) + randomDegree;
+                
+                this.currentRotation += totalDegree;
+                
+                // Execute rotation
+                this.canvas.style.transform = `rotate(${this.currentRotation}deg)`;
+                
+                // Determine winner
+                setTimeout(() => {
+                    this.isSpinning = false;
+                    
+                    const normalizedRotation = this.currentRotation % 360;
+                    const sliceAngle = 360 / this.items.length;
+                    const winningAngle = (270 - normalizedRotation + 360) % 360;
+                    const winningIndex = Math.floor(winningAngle / sliceAngle);
+                    
+                    const winner = this.items[winningIndex];
+                    
+                    this.resultDiv.textContent = winner;
+                    this.resultDiv.classList.add('show-result');
+                    
+                }, 3000); // Wait for the transition defined in CSS
+            }
+        }
+
+        const etapas = ['Activación', 'Ritual de saludo', 'Posturas de yoga', 'Respiración', 'Relajación', 'Meditación', 'Ritual de cierre'];
+        const ambientes = ['Playa', 'Parque', 'Escuela', 'Casa', 'Espaci...', 'Cariño', 'Suavidad', 'Niños', 'Amistad', 'Amor'];
+        // Fix the Espacio name just in case it's shortened
+        const ambientesCorrect = ['Playa', 'Parque', 'Escuela', 'Casa', 'Espacio', 'Cariño', 'Suavidad', 'Niños', 'Amistad', 'Amor'];
+        
+        const conceptos = ['Perro', 'Gato', 'Montaña', 'Piedra', 'Estrella', 'Árbol'];
+
+        new YogaWheel('wheel-etapas', etapas, 'res-etapas', 'btn-etapas');
+        new YogaWheel('wheel-ambientes', ambientesCorrect, 'res-ambientes', 'btn-ambientes');
+        new YogaWheel('wheel-conceptos', conceptos, 'res-conceptos', 'btn-conceptos');
+    </script>
+</body>
+
+</html>

@@ -214,6 +214,7 @@ class YogaFooter extends HTMLElement {
                             <li><a href="${pathPrefix}about.html">Nosotras</a></li>
                             <li><a href="${pathPrefix}directorio-profesores.html">Directorio de Profesores</a></li>
                             <li><a href="${pathPrefix}services/yoga-presencial.html">Formaciones</a></li>
+                            <li><a href="${pathPrefix}ruleta-de-yoga.html">Ruleta de Yoga</a></li>
                             <li><a href="${pathPrefix}contact.html">Contacto</a></li>
                         </ul>
                     </div>
