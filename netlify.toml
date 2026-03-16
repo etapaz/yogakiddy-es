@@ -101,10 +101,17 @@
   to = "/services/yoga-presencial.html"
   status = 301
 
+# Redirections génériques pour les anciens tags/catégories
+[[redirects]]
+  from = "/tags/*"
+  to = "/blog.html"
+  status = 301
+
+[[redirects]]
+  from = "/category/*"
+  to = "/blog.html"
+  status = 301
+
 # Nettoyage des anciennes règles temporaires liées au blog
 
-# Catch-all : toute ancienne URL non matchée → homepage (soft 301)
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 301
+# FIN
