@@ -13,7 +13,7 @@ class YogaNewsletterForm extends HTMLElement {
                 <div class="section-panel reveal" style="background-color: #E9EDCA; padding: 4rem clamp(2rem, 5vw, 4rem); max-width: 1100px; margin: 0 auto;">
                     <div class="flex-row">
                         <div style="flex: 1; text-align: center;">
-                            <img src="assets/cartas-gratis.jpg" alt="Cartas de Yoga Gratis" class="img-rounded-xl img-shadow" style="width: 100%; max-width: 450px; margin: 0 auto; display: block; transform: rotate(-2deg);">
+                            <img src="assets/cartas-gratis.webp" alt="Cartas de Yoga Gratis" class="img-rounded-xl img-shadow" style="width: 100%; max-width: 450px; margin: 0 auto; display: block; transform: rotate(-2deg);">
                         </div>
                         <div style="flex: 1.3; text-align: left;">
                             <span class="pill-badge" style="border-color: #3D5A3A; color: #3D5A3A; background-color: rgba(255,255,255,0.5); margin-bottom: 1.5rem;">Regalo Exclusivo</span>
