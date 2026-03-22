@@ -188,7 +188,7 @@ class YogaFooter extends HTMLElement {
                         <p class="footer-desc">Inspirando calma, creatividad y bienestar en la infancia a través del yoga y la atención plena. Desde 2016.</p>
                         <div style="margin-top: 1.5rem;">
                             <a href="https://academia.yogakiddy.com/super-pack-de-material-de-yoga-infantil-gratis/buy" target="_blank" class="footer-gift-card" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
-                                <img src="${pathPrefix}assets/cartas-gratis.jpg" alt="Cartas Gratis" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2);">
+                                <img src="${pathPrefix}assets/cartas-gratis.webp" alt="Cartas Gratis" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2);">
                                 <div>
                                     <span style="display: block; font-weight: 700; font-size: 0.85rem; color: #E8956B; line-height: 1.2;">Regalo Gratis</span>
                                     <span style="display: block; font-size: 0.8rem; color: rgba(255,255,255,0.9);">Descarga 10 Cartas de Yoga</span>
@@ -236,7 +236,7 @@ class YogaFooter extends HTMLElement {
                         </p>
                         <div class="footer-insta-single">
                             <a href="https://www.instagram.com/yogakiddy/" target="_blank" rel="noopener noreferrer">
-                                <img src="${pathPrefix}assets/instagram_2.png" alt="Instagram YogaKiddy" loading="lazy">
+                                <img src="${pathPrefix}assets/instagram_2.webp" alt="Instagram YogaKiddy" loading="lazy">
                             </a>
                         </div>
                     </div>

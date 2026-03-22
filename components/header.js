@@ -103,7 +103,7 @@ class YogaHeader extends HTMLElement {
         <header class="site-header">
             <nav class="container site-nav">
                 <a href="${pathPrefix}index.html" class="logo">
-                    <img src="${pathPrefix}assets/logo.png" alt="YogaKiddy" style="height: 50px; width: auto;">
+                    <img src="${pathPrefix}assets/logo.webp" alt="YogaKiddy" style="height: 50px; width: auto;">
                     <span class="logo-text">YogaKiddy</span>
                 </a>
                 <ul class="nav-links">
