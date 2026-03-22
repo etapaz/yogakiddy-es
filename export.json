@@ -37280,19 +37280,19 @@
       "created_at": "2020-05-04T21:39:35Z",
       "updated_at": "2020-05-05T00:42:19Z",
       "title": "Pago libre USD",
-      "html": "<p><a href=\"https://transactions.sendowl.com/cart?merchant_id=51344\" rel=\"nofollow\"><img src=\"https://transactions.sendowl.com/assets/external/view-cart.png\" loading="lazy"></a> <script type=\"text/javascript\" src=\"https://transactions.sendowl.com/assets/sendowl.js\"></script></p>",
+      "html": "<p><a href=\"https://transactions.sendowl.com/cart?merchant_id=51344\" rel=\"nofollow\"><img src=\"https://transactions.sendowl.com/assets/external/view-cart.webp\" loading="lazy"></a> <script type=\"text/javascript\" src=\"https://transactions.sendowl.com/assets/sendowl.js\"></script></p>",
       "source": [
         {
           "type": "markdown",
           "children": [
             {
-              "text": "\n\n<a href=\"https://transactions.sendowl.com/cart?merchant_id=51344\" rel=\"nofollow\"><img src=\"https://transactions.sendowl.com/assets/external/view-cart.png\" loading="lazy" /></a> <script type=\"text/javascript\" src=\"https://transactions.sendowl.com/assets/sendowl.js\" ></script>"
+              "text": "\n\n<a href=\"https://transactions.sendowl.com/cart?merchant_id=51344\" rel=\"nofollow\"><img src=\"https://transactions.sendowl.com/assets/external/view-cart.webp\" loading="lazy" /></a> <script type=\"text/javascript\" src=\"https://transactions.sendowl.com/assets/sendowl.js\" ></script>"
             }
           ]
         }
       ],
       "excerpt": "",
-      "image_url": "https://transactions.sendowl.com/assets/external/view-cart.png",
+      "image_url": "https://transactions.sendowl.com/assets/external/view-cart.webp",
       "code_head": ""
     },
     {
