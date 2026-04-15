@@ -29,3 +29,9 @@ desktop.ini
 
 # Export files (temporary)
 export.json
+
+# Git
+.git/
+
+# SEO migration output
+seo_migration_output/
