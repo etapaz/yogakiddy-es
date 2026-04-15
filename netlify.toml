@@ -54,6 +54,21 @@
   status = 301
 
 [[redirects]]
+  from = "/formacion-sonoterapia-infantil-en-linea"
+  to = "/services/sonoterapia-online.html"
+  status = 200
+
+[[redirects]]
+  from = "/formacion-de-sonoterapia-infantil-modalidad-en-linea"
+  to = "/formacion-sonoterapia-infantil-en-linea"
+  status = 301
+
+[[redirects]]
+  from = "/sonoterapia-infantil-en-linea"
+  to = "/services/sonoterapia-online.html"
+  status = 301
+
+[[redirects]]
   from = "/formacion-de-yoga-en-el-aula"
   to = "/services/teacher-training.html"
   status = 301
