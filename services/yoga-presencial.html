@@ -73,6 +73,13 @@
                 "startDate": "2026-10-16",
                 "endDate": "2026-10-17",
                 "location": { "@type": "Place", "name": "La Habana, Cuba" }
+            },
+            {
+                "@type": "CourseInstance",
+                "name": "Jodoigne, Bélgica",
+                "startDate": "2026-10-03",
+                "endDate": "2026-10-04",
+                "location": { "@type": "Place", "name": "Centro Santosha", "address": "Jodoigne, Bélgica" }
             }
         ]
     }
@@ -106,7 +113,6 @@
         }
 
         @keyframes float {
-
             0%,
             100% {
                 transform: translateX(-50%) translateY(0);
@@ -337,7 +343,7 @@
                         <h3>BÉLGICA 🇧🇪</h3>
                         <div class="date-highlight-list">
                             <div class="date-highlight-item">
-                                <p><strong>Jodoigne:</strong> 18 y 19 Abril 2026 (9h - 18h)</p>
+                                <p><strong>Jodoigne:</strong> 3 - 4 de octubre de 2026 (9h - 18h)</p>
                             </div>
                         </div>
                         <p class="location-price">350 EUR</p>
@@ -433,15 +439,15 @@
                         <p class="text-large mb-6">No estarás sola después de la formación. Te equipamos con material
                             digital profesional, valorado por miles de educadoras en todo el mundo.</p>
                         <ul class="feature-list">
-                            <li><span class="icon">&#128216;</span><span><strong>Manual Maestra:</strong> 40+ páginas
+                            <li><span class="icon">📘</span><span><strong>Manual Maestra:</strong> 40+ páginas
                                     con teoría profunda y planificaciones listas.</span></li>
-                            <li><span class="icon">&#129496;</span><span><strong>Historias Inspiradoras:</strong> 5
+                            <li><span class="icon">🤹</span><span><strong>Historias Inspiradoras:</strong> 5
                                     sesiones guiadas e ilustradas.</span></li>
-                            <li><span class="icon">&#127911;</span><span><strong>Audio-Calma:</strong> 6 meditaciones y
+                            <li><span class="icon">🎭</span><span><strong>Audio-Calma:</strong> 6 meditaciones y
                                     relajaciones en formato MP3/PDF.</span></li>
-                            <li><span class="icon">&#127924;</span><span><strong>Juego de Cartas:</strong> El mazo de 54
+                            <li><span class="icon">🎴</span><span><strong>Juego de Cartas:</strong> El mazo de 54
                                     cartas YogaKiddy para imprimir.</span></li>
-                            <li><span class="icon">&#127922;</span><span><strong>Bonus Lúdicos:</strong> Cubos, Bingo,
+                            <li><span class="icon">🎲</span><span><strong>Bonus Lúdicos:</strong> Cubos, Bingo,
                                     Saludo al Sol y póster exclusivo.</span></li>
                         </ul>
                     </div>
@@ -509,7 +515,7 @@
                                     de gran valor tanto profesional como personal. La metodología y cercanía son
                                     únicas."</p>
                                 <p class="testimonial-author">Alumna YogaKiddy</p>
-                                <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                                <p class="testimonial-stars">★★★★★</p>
                             </div>
                         </div>
                         <div class="carousel-slide">
@@ -518,7 +524,7 @@
                                     tienen las profes. Se nota que está hecho desde el amor y que lo que hacen les
                                     apasiona."</p>
                                 <p class="testimonial-author">Alumna Certificada</p>
-                                <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                                <p class="testimonial-stars">★★★★★</p>
                             </div>
                         </div>
                         <div class="carousel-slide">
@@ -526,7 +532,7 @@
                                 <p class="testimonial-text">"El curso superó lejos mis expectativas... me encantó lo
                                     lúdico, entretenido y el enfoque pedagógico que dan al curso."</p>
                                 <p class="testimonial-author">Monitora de Yoga</p>
-                                <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                                <p class="testimonial-stars">★★★★★</p>
                             </div>
                         </div>
                         <div class="carousel-slide">
@@ -534,12 +540,12 @@
                                 <p class="testimonial-text">"Sabía que sería un fin de semana de mucho aprendizaje...
                                     recibí más de lo que esperaba. Ahora tengo una gran responsabilidad."</p>
                                 <p class="testimonial-author">Namaste</p>
-                                <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                                <p class="testimonial-stars">★★★★★</p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-controls">
-                        <button class="carousel-pause" id="pauseBtn">&#9208;</button>
+                        <button class="carousel-pause" id="pauseBtn">⏸</button>
                         <div id="carouselDots" style="display: flex; gap: 0.8rem;"></div>
                     </div>
                 </div>
@@ -585,7 +591,7 @@
                 function nextSlide() { goToSlide((currentIndex + 1) % slides.length); }
                 function startInterval() { slideInterval = setInterval(() => { if (!isPaused) nextSlide(); }, 5000); }
                 function resetInterval() { clearInterval(slideInterval); startInterval(); }
-                pauseBtn.addEventListener('click', () => { isPaused = !isPaused; pauseBtn.textContent = isPaused ? '\u25B6' : '\u23F8'; });
+                pauseBtn.addEventListener('click', () => { isPaused = !isPaused; pauseBtn.textContent = isPaused ? '5B6' : '3F8'; });
                 startInterval();
             </script>
         </section>
@@ -657,7 +663,7 @@
     <a href="https://airtable.com/appnBr75NVqmhHBOM/shr2393dqi6LCVCDV" target="_blank" class="floating-btn-animated">
         <span>Inscríbete sin compromiso</span>
     </a>
-    <button class="back-to-top" aria-label="Volver arriba">&#8593;</button>
+    <button class="back-to-top" aria-label="Volver arriba">↑</button>
 </body>
 
 </html>
