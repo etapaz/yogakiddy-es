@@ -72,21 +72,32 @@
     <main>
         <!-- ═══ HERO ═══ -->
         <section class="hero-section">
-            <div class="container">
-                <div class="flex-row">
-                    <div>
+            <div class="container" style="text-align: center;">
+                <div class="flex-row" style="flex-direction: column; gap: 3rem;">
+                    <div style="max-width: 900px; margin: 0 auto;">
                         <span class="pill-badge">Formación en Yoga Infantil</span>
                         <h1 class="hero-title">Transforma la vida de tus niños a través del juego y el bienestar.</h1>
-                        <p class="hero-subtitle">Únete a la Metodología YogaKiddy. Herramientas prácticas y creativas
+                        <p class="hero-subtitle" style="max-width: 800px; margin: 0 auto 2.5rem;">Únete a la Metodología YogaKiddy. Herramientas prácticas y creativas
                             para que educadoras, terapeutas y familias guíen sesiones de yoga infantil llenas de
                             sentido.</p>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="#modalidades" class="btn">Explorar Formaciones</a>
+                        
+                        <!-- Mención Evento Próximo (Clicable) -->
+                        <a href="services/laboratorio-creativo-yogakiddy.html" class="announcement-badge reveal" style="display: inline-flex; align-items: center; gap: 1rem; background: #fff9f5; border: 2px dashed #e8956b; padding: 1rem 2rem; border-radius: 20px; margin-bottom: 3rem; color: #d67d50; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: transform 0.3s ease; box-shadow: 0 10px 25px rgba(232, 149, 107, 0.1);">
+                            <span style="font-size: 2rem;">🎨</span>
+                            <div style="text-align: left;">
+                                <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; margin-bottom: 0.2rem;">¡Este domingo 26 de abril!</div>
+                                <div style="font-size: 1.15rem;">Laboratorio Creativo: <strong>Crea 10 clases en 2 horas</strong> 🐾</div>
+                            </div>
+                            <span style="margin-left: 1rem; font-size: 1.5rem;">→</span>
+                        </a>
+
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                            <a href="#modalidades" class="btn btn--lg">Explorar Formaciones</a>
                         </div>
                     </div>
-                    <div>
+                    <div style="max-width: 800px; margin: 0 auto;">
                         <img src="assets/YogaKiddy (Web) 163.webp" alt="Grupo de formación YogaKiddy sonriente"
-                            class="img-rounded-xl img-shadow" style="width: 100%;" loading="lazy">
+                            class="img-rounded-xl img-shadow" style="width: 100%; border-radius: 30px;" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -195,20 +206,45 @@
                         </div>
                     </a>
                 </div>
-                <div class="text-center" style="margin-top: 2rem;">
+                <div class="flex-row" style="justify-content: center; gap: 2rem; align-items: stretch; margin-top: 3rem;">
+                    <!-- Sonoterapia -->
                     <a href="services/sonoterapia-online.html" class="card reveal"
-                        style="display: inline-block; max-width: 760px; text-align: left; text-decoration: none;">
-                        <div class="card-body" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-                            <img src="assets/matias-sonoterapia.webp"
-                                alt="Formación de Sonoterapia Infantil en Línea con Matías Giménez Hutton"
-                                loading="lazy"
-                                style="width: 170px; max-width: 100%; border-radius: 20px; box-shadow: 0 14px 30px rgba(0,0,0,0.12);">
-                            <div style="flex: 1; min-width: 220px;">
-                                <p class="card-tag">Nueva Formación 2026</p>
-                                <h3 class="mb-2">Sonoterapia Infantil en Línea</h3>
-                                <p class="mb-3">12 horas repartidas en 3 sábados en vivo para aprender a usar el sonido
-                                    como herramienta de bienestar, regulación y conexión con niños y niñas.</p>
-                                <span class="link-arrow">Ver programa y horarios</span>
+                        style="display: flex; flex: 1; max-width: 540px; text-align: left; text-decoration: none;">
+                        <div class="card-body" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <img src="assets/matias-sonoterapia.webp"
+                                    alt="Formación de Sonoterapia Infantil en Línea con Matías Giménez Hutton"
+                                    loading="lazy"
+                                    style="width: 100px; height: 100px; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                                <div>
+                                    <p class="card-tag">Formación 2026</p>
+                                    <h3 class="mb-1" style="font-size: 1.25rem;">Sonoterapia Infantil</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-3" style="font-size: 0.95rem; line-height: 1.5;">Aprende a usar el sonido como herramienta de bienestar y conexión con niños en 12 horas en vivo.</p>
+                                <span class="link-arrow">Ver programa</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Laboratorio Creativo -->
+                    <a href="services/laboratorio-creativo-yogakiddy.html" class="card reveal"
+                        style="display: flex; flex: 1; max-width: 540px; text-align: left; text-decoration: none;">
+                        <div class="card-body" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <img src="assets/laboratorio-creativo.png"
+                                    alt="Laboratorio Creativo Yogakiddy"
+                                    loading="lazy"
+                                    style="width: 100px; height: 100px; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                                <div>
+                                    <p class="card-tag" style="background: #e8956b; color: white;">Workshop Online</p>
+                                    <h3 class="mb-1" style="font-size: 1.25rem;">Laboratorio Creativo</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-3" style="font-size: 0.95rem; line-height: 1.5;"><strong>¡Este domingo 26 de abril!</strong> Crea 10 clases de yoga infantil en solo 2 horas de pura creatividad.</p>
+                                <span class="link-arrow">Reservar mi lugar</span>
                             </div>
                         </div>
                     </a>
