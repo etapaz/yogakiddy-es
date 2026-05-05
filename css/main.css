@@ -37,8 +37,8 @@
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
-    --spacing-2xl: 8rem;
+    --spacing-xl: 4rem;
+    --spacing-2xl: 5rem;
 
     /* Borders */
     --radius-sm: 12px;
@@ -155,13 +155,13 @@ img {
 
 /* ═══ SECTION BLOCKS — Squarespace-style rounded panels ═══ */
 .section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
 }
 
 .section-panel {
     background: var(--color-white);
     border-radius: var(--radius-xl);
-    padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem);
+    padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 4vw, 4rem);
     margin: 0 clamp(1rem, 2vw, 2rem);
 }
 
@@ -1056,7 +1056,7 @@ img {
     border: none;
     height: 1px;
     background: rgba(0, 0, 0, 0.08);
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 /* ═══ GLASS EFFECT ═══ */
@@ -1093,10 +1093,10 @@ img {
 
 /* ═══ HERO SPECIFIC ═══ */
 .hero-section {
-    min-height: 85vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
 
 .hero-title {
