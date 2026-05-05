@@ -100,7 +100,7 @@
     <style>
         .hero-section {
             background: linear-gradient(135deg, #f6efe9 0%, #faf5f1 100%);
-            padding: 5rem 1rem 3rem;
+            padding: 3rem 1rem 1.5rem;
         }
 
         .hero-content {
@@ -151,11 +151,11 @@
         }
 
         .section-container {
-            padding: 4rem 1rem;
+            padding: 1.5rem 1rem;
         }
 
         .section {
-            margin-bottom: 4rem;
+            margin-bottom: 1.5rem;
         }
 
         .section h2 {
@@ -304,7 +304,7 @@
 
         .cta-section {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 2rem 1rem;
             background-color: #f6efe9;
         }
 
@@ -316,7 +316,7 @@
             text-align: center;
             color: #ccc;
             font-size: 1.5rem;
-            margin: 3rem 0;
+            margin: 1.5rem 0;
         }
 
         /* Sticky Sidebar */
@@ -424,6 +424,51 @@
 
         .section-container {
             padding: 0;
+        }
+
+        .testimonials-section {
+            padding: 2.5rem 1rem;
+            background-color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .testimonial-card {
+            background-color: #faf5f1;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card:before {
+            content: "“";
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #e8956b;
+            opacity: 0.2;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 0;
         }
 
         @media (max-width: 768px) {
@@ -704,40 +749,26 @@
             <section class="section">
                 <h2 style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
                     <span style="font-size: 2.2rem;">🎨</span>
-                    Próximos laboratorios creativos
+                    Próximos laboratorios creativos 2026
                 </h2>
-                <p style="text-align: center; color: #555; margin-bottom: 2rem;">Una experiencia creativa diferente cada mes. Elige el tema que más te inspire.</p>
+                <p style="text-align: center; color: #555; margin-bottom: 2rem;">Únete a nuestras próximas sesiones temáticas y transforma tu manera de enseñar.</p>
 
                 <div class="labs-list">
                     <div class="lab-item">
-                        <p>✈️ Laboratorio creativo: Viajes</p>
+                        <p>💝 <strong>Emociones</strong></p>
+                        <p style="font-size: 0.9rem; color: #e8956b; margin-top: 0.5rem;">📅 14 junio 2026</p>
                     </div>
                     <div class="lab-item">
-                        <p>💝 Laboratorio creativo: Emociones</p>
+                        <p>🤝 <strong>Amistad</strong></p>
+                        <p style="font-size: 0.9rem; color: #e8956b; margin-top: 0.5rem;">📅 09 agosto 2026</p>
                     </div>
                     <div class="lab-item">
-                        <p>🤝 Laboratorio creativo: Amistad</p>
+                        <p>🎃 <strong>Estaciones y Halloween</strong></p>
+                        <p style="font-size: 0.9rem; color: #e8956b; margin-top: 0.5rem;">📅 11 octubre 2026</p>
                     </div>
                     <div class="lab-item">
-                        <p>🌿 Laboratorio creativo: Naturaleza</p>
-                    </div>
-                    <div class="lab-item">
-                        <p>🌍 Laboratorio creativo: Estaciones</p>
-                    </div>
-                    <div class="lab-item">
-                        <p>🌊 Laboratorio creativo: Océano</p>
-                    </div>
-                    <div class="lab-item">
-                        <p>🚀 Laboratorio creativo: Espacio</p>
-                    </div>
-                    <div class="lab-item">
-                        <p>🐆 Laboratorio creativo: Selva</p>
-                    </div>
-                    <div class="lab-item">
-                        <p>🧘 Laboratorio creativo: Calma</p>
-                    </div>
-                    <div class="lab-item">
-                        <p>💪 Laboratorio creativo: Autoconfianza</p>
+                        <p>🎄 <strong>Navidad</strong></p>
+                        <p style="font-size: 0.9rem; color: #e8956b; margin-top: 0.5rem;">📅 06 diciembre 2026</p>
                     </div>
                 </div>
             </section>
@@ -747,15 +778,29 @@
             <!-- Sticky Sidebar -->
             <aside class="sticky-sidebar">
                 <div class="sidebar-card">
-                    <h3>Información del encuentro</h3>
-                    <h4>Laboratorio creativo: Animales</h4>
-
+                    <h3>Calendario 2026</h3>
+                    
                     <div class="sidebar-detail-row">
-                        <span class="sidebar-detail-label">📅 Fecha</span>
-                        <span class="sidebar-detail-value">Próxima fecha por anunciar</span>
+                        <span class="sidebar-detail-label">💝 Emociones</span>
+                        <span class="sidebar-detail-value">14 junio 2026</span>
                     </div>
 
                     <div class="sidebar-detail-row">
+                        <span class="sidebar-detail-label">🤝 Amistad</span>
+                        <span class="sidebar-detail-value">09 agosto 2026</span>
+                    </div>
+
+                    <div class="sidebar-detail-row">
+                        <span class="sidebar-detail-label">🎃 Estaciones & Halloween</span>
+                        <span class="sidebar-detail-value">11 octubre 2026</span>
+                    </div>
+
+                    <div class="sidebar-detail-row">
+                        <span class="sidebar-detail-label">🎄 Navidad</span>
+                        <span class="sidebar-detail-value">06 diciembre 2026</span>
+                    </div>
+
+                    <div class="sidebar-detail-row" style="margin-top: 0.5rem;">
                         <span class="sidebar-detail-label">📱 Modalidad</span>
                         <span class="sidebar-detail-value">Online en vivo (GoogleMeet)</span>
                     </div>
@@ -770,13 +815,8 @@
                         <span class="sidebar-detail-value">Material descargable</span>
                     </div>
 
-                    <div class="sidebar-detail-row">
-                        <span class="sidebar-detail-label">🕐 Horario</span>
-                        <span class="sidebar-detail-value">Por anunciar</span>
-                    </div>
-
                     <div class="sidebar-note">
-                        Los cupos son limitados para poder mantener un espacio cercano y participativo.
+                        Elige la temática que más te guste o participa en todas para completar tu biblioteca creativa.
                     </div>
 
                     <div class="sidebar-pricing">
@@ -812,6 +852,46 @@
                 </div>
             </aside>
         </div>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="section-container">
+                <h2 style="text-align: center;">Lo que dicen nuestras alumnas</h2>
+                
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Maravilloso curso, además de brindarnos herramientas muy específicas y aplicables que sin duda mejorarán nuestros talleres, Carmen posee muchas cualidades personales, comunicacionales y lúdicas enriqueciendo aún más el curso.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Fue mi primera experiencia, la cual me encantó por lo lúdica, seria y estructurada. Esto sin duda me ayudará muchísimo en mis clases.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Está laboratorio creativo lo encontré enriquecedor en todo sentido, agradecida de lo aprendido.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Muy bonita explicación, seguimiento adecuado de la clase, haciendo pausa para explicar cada etapa y profundizar y corregir cada idea propuesta señalando cuando usarla a lo largo de la clase aplicada a los niños. GRACIAS NAMASTE</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Poder participar en el laboratorio creativo, fue la mejor decisión, ya que la manera de enseñar que tiene Carmen es maravillosa, con pausas, sin prisa y detallado. Volvería a tomar otro recurso con ella.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Agradecida de las clases, son muy ordenadas, creativas, dinámicas que nos hacen llenar de ideas fluidas.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Estoy muy agradecida de Yogakiddy por la entrega constante de información a las alumnas, por el respeto y cariño que demuestran hacia los niños y la expectativa de poder aportar nuestro granito entregando espacios como el yoga a los niños, en donde se aprende más que posturas...</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Este laboratorio creativo fue muy lindo porque entre todos creamos nuevas actividades tomando en cuenta las maravillosas ideas de los demás con la guía amorosa de Carmen</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Este laboratorio es una verdadera inspiración ya que no solo te permite tener herramientas para construir clases de forma simple sino también conectar con la parte más maravillosa de nuestra infancia, la creación grupal, el colectivo, el juego. Nuevamente agradecer a Carmen por su infinito cariño❤️</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">El Laboratorio es un verdadero lujo, está perfecto!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- CTA Section -->
         <section class="cta-section" id="reservar">
