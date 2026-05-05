@@ -115,6 +115,7 @@ class YogaHeader extends HTMLElement {
                             <li><a href="${pathPrefix}services/yoga-online-vivo.html">Clases en Vivo (Meet)</a></li>
                         </ul>
                     </li>
+                    <li><a href="${pathPrefix}services/laboratorio-creativo-yogakiddy.html">Laboratorio Creativo</a></li>
                     <li><a href="${pathPrefix}material.html">Material</a></li>
                     <li><a href="${pathPrefix}about.html">Nosotras</a></li>
                     <li><a href="${pathPrefix}blog.html">Blog</a></li>
