@@ -463,12 +463,110 @@
             font-family: serif;
         }
 
-        .testimonial-text {
-            font-size: 1rem;
-            line-height: 1.6;
+        .problem-section {
+            background-color: #faf5f1;
+            padding: 3rem 1rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .problem-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #f28b82;
+            font-size: 0.95rem;
             color: #555;
-            font-style: italic;
-            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .transformation-section {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .transformation-box {
+            background: #e8956b;
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(232, 149, 107, 0.2);
+            margin: 2rem 0;
+        }
+
+        .transformation-box h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .transformation-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .transformation-list li {
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .transformation-list li:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            background: white;
+            color: #e8956b;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .method-step {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .step-number {
+            background: #e8956b;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .method-step {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
         }
 
         @media (max-width: 768px) {
@@ -514,71 +612,98 @@
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-content">
-                <img src="../assets/Carmen Sepulveda YogaKiddy crea diez clases de yoga para niños en dos horas.webp" 
+                <img src="../assets/Carmen Sepulveda YogaKiddy crea diez clases de yoga para niños en dos hours.webp" 
                      alt="Carmen Sepúlveda - YogaKiddy Academy" 
                      style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 15px 35px rgba(0,0,0,0.1); margin-bottom: 2rem; background-color: white;">
-                <h1>Laboratorio Creativo: Crea 10 Clases de Yoga Infantil en Solo 2 Horas</h1>
-                <p class="hero-subtitle">Workshop online práctico y creativo diseñado para monitoras, educadoras y profesoras que desean crear clases de yoga para niños con más inspiración, claridad y confianza. Aprende la metodología Yogakiddy y desbloquea tu creatividad.</p>
+                <h1 style="max-width: 800px;">Crea 10 clases de yoga infantil listas para usar en solo 2 horas — sin quedarte sin ideas nunca más</h1>
+                <p class="hero-subtitle" style="font-size: 1.3rem; font-weight: 500; color: #2c3b2b;">Deja de estresarte por la planificación. Aprende el sistema práctico para diseñar sesiones profesionales, lúdicas y efectivas mientras disfrutas del proceso.</p>
 
-                <div class="badge-group">
-                    <span class="info-badge">Modalidad online en vivo</span>
-                    <span class="info-badge">⏱ 2 horas</span>
-                    <span class="info-badge">Material descargable</span>
+                <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.8rem; margin: 1.5rem 0; text-align: left;">
+                    <span style="font-size: 1.1rem; color: #555; display: flex; align-items: center; gap: 0.5rem;">✔ <strong>Para profesores sin tiempo</strong> (planifica en minutos, no en horas)</span>
+                    <span style="font-size: 1.1rem; color: #555; display: flex; align-items: center; gap: 0.5rem;">✔ <strong>Sin creatividad bloqueada</strong> (activa tu imaginación al instante)</span>
+                    <span style="font-size: 1.1rem; color: #555; display: flex; align-items: center; gap: 0.5rem;">✔ <strong>Con estructura lista</strong> (metodología probada internacionalmente)</span>
                 </div>
 
-                <a href="https://airtable.com/appnBr75NVqmhHBOM/shrNEzlCGPt5Mj4xo" class="btn" style="margin-top: 2rem; font-size: 1.05rem; padding: 0.9rem 2.5rem;" target="_blank">RESERVAR MI LUGAR</a>
+                <a href="https://airtable.com/appnBr75NVqmhHBOM/shrNEzlCGPt5Mj4xo" class="btn" style="margin-top: 1rem; font-size: 1.2rem; padding: 1.2rem 3rem; background-color: #e8956b;" target="_blank">QUIERO CREAR MIS 10 CLASES AHORA</a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">⏱ Inscripciones abiertas - Cupos limitados</p>
             </div>
         </section>
 
         <div class="page-wrapper">
             <div class="main-content">
                 <div class="section-container">
-            <!-- Introduction Section -->
+            <!-- Problem Section -->
+            <section class="section problem-section">
+                <h2 style="margin-bottom: 1rem;">¿Te sientes así al preparar tus clases?</h2>
+                <p style="text-align: center; color: #555;">La mayoría de los profesores de yoga infantil pasan por esto antes de conocer nuestro método:</p>
+                
+                <div class="problem-grid">
+                    <div class="problem-item">
+                        <span>❌</span>
+                        <p>Te quedas sin ideas nuevas cada semana.</p>
+                    </div>
+                    <div class="problem-item">
+                        <span>❌</span>
+                        <p>Repites siempre los mismos juegos y posturas.</p>
+                    </div>
+                    <div class="problem-item">
+                        <span>❌</span>
+                        <p>Pierdes horas buscando inspiración en internet.</p>
+                    </div>
+                    <div class="problem-item">
+                        <span>❌</span>
+                        <p>Dudas si tus clases son realmente efectivas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tu nueva realidad -->
+            <section class="section transformation-section">
+                <h2>Tu nueva realidad tras el laboratorio</h2>
+                <p>El Laboratorio Creativo es el puente entre el estrés de la hoja en blanco y la seguridad de tener un año de clases listo.</p>
+
+                <div class="transformation-box">
+                    <h3>Después del laboratorio:</h3>
+                    <ul class="transformation-list">
+                        <li>Tendrás <strong>10 clases completas</strong> listas para usar.</li>
+                        <li>Podrás repetir el proceso <strong>infinitamente</strong>.</li>
+                        <li><strong>Nunca más</strong> volverás a improvisar por falta de tiempo.</li>
+                        <li>Te sentirás un <strong>profesor creativo y seguro</strong>.</li>
+                    </ul>
+                </div>
+                
+                <a href="https://airtable.com/appnBr75NVqmhHBOM/shrNEzlCGPt5Mj4xo" class="btn" style="background-color: #2c3b2b; margin-top: 1rem;" target="_blank">RESERVAR MI LUGAR HOY</a>
+            </section>
+
+            <div class="divider">⸻</div>
+
+            <!-- Cómo lo hacemos -->
             <section class="section">
-                <h2>¿Por Qué un Laboratorio Creativo para Crear Clases de Yoga Infantil?</h2>
-
-                <p>Durante mucho tiempo pensé que <strong>preparar una clase de yoga para niños</strong> debía ser algo complejo.</p>
-
-                <p style="margin-left: 1rem; color: #888;">
-                    Elegir una historia…<br>
-                    pensar en las posturas…<br>
-                    crear juegos…<br>
-                    imaginar una relajación…
-                </p>
-
-                <p>Y muchas veces escuchaba lo mismo de otras monitoras:</p>
-
-                <ul class="feature-list" style="list-style: none; padding: 0;">
-                    <li style="padding-left: 2rem;">
-                        <span style="color: #ccc;">"Me cuesta inventar historias para mis clases."</span>
-                    </li>
-                    <li style="padding-left: 2rem;">
-                        <span style="color: #ccc;">"A veces me quedo sin ideas."</span>
-                    </li>
-                    <li style="padding-left: 2rem;">
-                        <span style="color: #ccc;">"Siento que siempre hago lo mismo."</span>
-                    </li>
-                    <li style="padding-left: 2rem;">
-                        <span style="color: #ccc;">"Paso mucho tiempo preparando una clase."</span>
-                    </li>
-                    <li style="padding-left: 2rem;">
-                        <span style="color: #ccc;">"Tengo muchas ganas de enseñar yoga infantil, pero me falta creatividad."</span>
-                    </li>
-                </ul>
-
-                <p><strong>Pero con los años descubrí algo muy simple.</strong></p>
-
-                <div class="highlight-box">
-                    <p style="margin: 0;">Cuando tienes una estructura clara y permites que la creatividad fluya, crear clases de yoga infantil puede convertirse en algo muy fácil y profundamente divertido.</p>
+                <h2 style="margin-bottom: 3rem;">Método YogaKiddy en 3 Pasos</h2>
+                
+                <div class="method-step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Estructura Base Profesional</h3>
+                        <p>Aprende el esqueleto de una clase perfecta: desde el ritual de inicio hasta la relajación final. Sin vacíos.</p>
+                    </div>
                 </div>
 
-                <p>Porque la creatividad no es algo que algunas personas tienen y otras no. <strong>La creatividad se puede activar.</strong></p>
+                <div class="method-step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Generación Explosiva de Ideas</h3>
+                        <p>Usamos dinámicas de creatividad para desbloquear temas (animales, espacio, emociones) en segundos.</p>
+                    </div>
+                </div>
 
-                <p>Y cuando tienes una estructura simple, crear clases se vuelve algo natural.</p>
-
-                <p><strong>Por eso nace este espacio.</strong></p>
-
-                <p>El Laboratorio Creativo Yogakiddy es un encuentro online donde vamos a jugar con ideas, activar la imaginación y diseñar juntas 10 clases completas de yoga infantil en solo 2 horas.</p>
+                <div class="method-step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Transformación en Clase Lista</h3>
+                        <p>Bajamos las ideas a la práctica. Al final de las 2 horas, tienes tus 10 clases diseñadas y escritas.</p>
+                    </div>
+                </div>
             </section>
 
             <div class="divider">⸻</div>
@@ -713,33 +838,71 @@
 
             <div class="divider">⸻</div>
 
-            <!-- FAQ Section -->
+            <!-- Para quién es -->
             <section class="section">
-                <h2 style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                    <span style="font-size: 2.2rem;">❓</span>
-                    Preguntas Frecuentes
-                </h2>
-
-                <div style="max-width: 700px; margin: 0 auto;">
-                    <div style="margin: 2rem 0; padding: 1.5rem; background-color: #f6efe9; border-radius: 8px;">
-                        <h3 style="color: #2c3b2b; margin-top: 0;">¿Para quién es este laboratorio?</h3>
-                        <p style="margin-bottom: 0; color: #555;">Este taller está diseñado para monitoras, educadoras, profesoras y facilitadores que desean crear clases de yoga infantil de manera más rápida y efectiva. No necesitas experiencia previa con la metodología Yogakiddy.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: #f6efe9; padding: 2rem; border-radius: 15px;">
+                        <h3 style="color: #2c3b2b; margin-top: 0;">✅ Este laboratorio es para ti si:</h3>
+                        <ul class="feature-list" style="margin: 0;">
+                            <li>Eres profesor de yoga infantil o educadora.</li>
+                            <li>Sientes que repites siempre lo mismo.</li>
+                            <li>Quieres optimizar tu tiempo de preparación.</li>
+                            <li>Buscas un método práctico y creativo.</li>
+                        </ul>
                     </div>
-
-                    <div style="margin: 2rem 0; padding: 1.5rem; background-color: #f6efe9; border-radius: 8px;">
-                        <h3 style="color: #2c3b2b; margin-top: 0;">¿Qué necesito para participar?</h3>
-                        <p style="margin-bottom: 0; color: #555;">Solo necesitas una conexión a internet, una computadora y estar en un lugar cómodo. El taller será por GoogleMeet en vivo, así que podrás participar desde cualquier parte del mundo.</p>
+                    <div style="background: #faf5f1; padding: 2rem; border-radius: 15px; opacity: 0.8;">
+                        <h3 style="color: #888; margin-top: 0;">❌ Este laboratorio NO es para ti si:</h3>
+                        <ul class="feature-list" style="margin: 0; filter: grayscale(1);">
+                            <li>Buscas solo teoría y no quieres practicar.</li>
+                            <li>No tienes interés en la metodología lúdica.</li>
+                            <li>Ya tienes un sistema que te funciona perfecto.</li>
+                        </ul>
                     </div>
+                </div>
+            </section>
 
-                    <div style="margin: 2rem 0; padding: 1.5rem; background-color: #f6efe9; border-radius: 8px;">
-                        <h3 style="color: #2c3b2b; margin-top: 0;">¿Recibiré un material descargable?</h3>
-                        <p style="margin-bottom: 0; color: #555;">Sí. Al finalizar el laboratorio recibirás un cuaderno creativo en PDF con la estructura Yogakiddy, espacio para crear nuevas sesiones e ideas para seguir explorando tu creatividad.</p>
-                    </div>
+            <div class="divider">⸻</div>
 
-                    <div style="margin: 2rem 0; padding: 1.5rem; background-color: #f6efe9; border-radius: 8px;">
-                        <h3 style="color: #2c3b2b; margin-top: 0;">¿Puedo acceder al contenido después?</h3>
-                        <p style="margin-bottom: 0; color: #555;">El taller es en vivo, pero recibirás el material descargable que podrás usar indefinidamente para crear nuevas clases cuando lo desees.</p>
+            <!-- Qué incluye -->
+            <section class="section">
+                <h2 style="text-align: center; margin-bottom: 2rem;">¿Qué incluye tu reserva?</h2>
+                <div class="labs-list">
+                    <div class="lab-item" style="text-align: center;">
+                        <span style="font-size: 2.5rem;">📝</span>
+                        <h4 style="margin: 1rem 0;">10 Clases completas</h4>
+                        <p style="font-size: 0.9rem;">Diseñadas durante el workshop y listas para usar.</p>
                     </div>
+                    <div class="lab-item" style="text-align: center;">
+                        <span style="font-size: 2.5rem;">📚</span>
+                        <h4 style="margin: 1rem 0;">Plantilla Reutilizable</h4>
+                        <p style="font-size: 0.9rem;">El sistema Yogakiddy para usar en todas tus futuras clases.</p>
+                    </div>
+                    <div class="lab-item" style="text-align: center;">
+                        <span style="font-size: 2.5rem;">🎥</span>
+                        <h4 style="margin: 1rem 0;">Acceso a Grabación</h4>
+                        <p style="font-size: 0.9rem;">Para repasar las dinámicas creativas cuando quieras.</p>
+                    </div>
+                    <div class="lab-item" style="text-align: center;">
+                        <span style="font-size: 2.5rem;">🎁</span>
+                        <h4 style="margin: 1rem 0;">Cuaderno Creativo PDF</h4>
+                        <p style="font-size: 0.9rem;">Material de apoyo profesional para tu formación.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://airtable.com/appnBr75NVqmhHBOM/shrNEzlCGPt5Mj4xo" class="btn" style="background-color: #e8956b;" target="_blank">RESERVAR MI LUGAR AHORA</a>
+                </div>
+            </section>
+
+            <div class="divider">⸻</div>
+
+            <!-- Inversión -->
+            <section class="section" style="text-align: center;">
+                <h2>Invierte en tu tranquilidad creativa</h2>
+                <div class="highlight-box" style="max-width: 600px; margin: 2rem auto; border: 2px solid #e8956b;">
+                    <p style="font-size: 1.1rem; color: #555;">Preparar 10 clases profesionales te tomaría <strong>semanas de trabajo e investigación</strong>.</p>
+                    <p style="font-size: 1.4rem; color: #2c3b2b; font-weight: bold; margin: 1rem 0;">Hoy puedes tenerlo todo listo por menos de lo que cuesta una clase privada.</p>
+                    <div style="font-size: 2rem; color: #e8956b; font-weight: 800;">Desde $20 USD / 20€</div>
+                    <p style="font-size: 0.9rem; color: #888; margin-top: 0.5rem;">(Dependiendo de tu país de residencia)</p>
                 </div>
             </section>
 
@@ -896,12 +1059,12 @@
         <!-- CTA Section -->
         <section class="cta-section" id="reservar">
             <div class="section-container">
-                <h2>¿Listo para transformar tu creatividad?</h2>
-                <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Si sientes que quieres renovar tu inspiración y crear nuevas clases de yoga infantil con más confianza y claridad, este espacio es para ti.
+                <h2>¿Lista para transformar tu creatividad?</h2>
+                <p style="font-size: 1.2rem; color: #555; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Únete al Laboratorio Creativo y llévate tu año de clases planificado en una sola tarde. 
                 </p>
-                <a href="https://airtable.com/appnBr75NVqmhHBOM/shrNEzlCGPt5Mj4xo" class="btn" style="background-color: #2c3b2b; font-size: 1.05rem; padding: 0.9rem 2.5rem;" target="_blank">RESERVAR MI LUGAR</a>
-                <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #888;">Los cupos son limitados para mantener un espacio cercano y participativo.</p>
+                <a href="https://airtable.com/appnBr75NVqmhHBOM/shrNEzlCGPt5Mj4xo" class="btn" style="background-color: #e8956b; font-size: 1.2rem; padding: 1.2rem 3rem;" target="_blank">QUIERO MIS 10 CLASES AHORA</a>
+                <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #888;">⚡ Cupos limitados para mantener la calidad del taller.</p>
             </div>
         </section>
     </main>
