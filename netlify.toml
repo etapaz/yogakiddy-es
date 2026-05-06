@@ -18,6 +18,11 @@
   status = 301
 
 [[redirects]]
+  from = "/yoga-presencial.html"
+  to = "/services/yoga-presencial.html"
+  status = 301
+
+[[redirects]]
   from = "/quienes-somos"
   to = "/about.html"
   status = 301
@@ -56,7 +61,7 @@
 [[redirects]]
   from = "/formacion-sonoterapia-infantil-en-linea"
   to = "/services/sonoterapia-online.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/formacion-de-sonoterapia-infantil-modalidad-en-linea"
@@ -70,7 +75,7 @@
 
 [[redirects]]
   from = "/formacion-de-yoga-en-el-aula"
-  to = "/services/teacher-training.html"
+  to = "/services/formacion-yoga-en-el-aula-en-linea.html"
   status = 301
 
 # Ateliers en ligne → page la plus pertinente
@@ -86,13 +91,13 @@
 
 [[redirects]]
   from = "/mi-primera-clase-de-yoga"
-  to = "/services/kids-yoga.html"
+  to = "/blog/clase-de-yoga-para-ninos-y-ninas.html"
   status = 301
 
 # Pages spéciales
 [[redirects]]
   from = "/material"
-  to = "/"
+  to = "/material.html"
   status = 301
 
 [[redirects]]
@@ -102,7 +107,7 @@
 
 [[redirects]]
   from = "/pandi-yogi"
-  to = "/"
+  to = "/blog/yogakiddy-anuncia-su-personaje-pandi-yogi.html"
   status = 301
 
 [[redirects]]
