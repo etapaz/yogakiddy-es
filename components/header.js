@@ -86,8 +86,10 @@ class YogaHeader extends HTMLElement {
     render() {
         const inSubdir = ['/services/', '/blog/'].some(seg => window.location.pathname.includes(seg));
         const pathPrefix = inSubdir ? '../' : '';
+        const isPrivatePreview = window.location.pathname.includes('/clase-gratis-');
 
         this.innerHTML = `
+        ${isPrivatePreview ? '' : `
         <div class="top-bar">
             <span class="sparkle sparkle-1">✨</span>
             <span class="sparkle sparkle-2">⭐</span>
@@ -100,6 +102,7 @@ class YogaHeader extends HTMLElement {
             <span class="sparkle sparkle-6">⭐</span>
             <button class="close-top-bar" aria-label="Cerrar">&times;</button>
         </div>
+        `}
         <header class="site-header">
             <nav class="container site-nav">
                 <a href="${pathPrefix}index.html" class="logo">

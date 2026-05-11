@@ -10,6 +10,7 @@ class YogaFooter extends HTMLElement {
     render() {
         const inSubdir = ['/services/', '/blog/'].some(seg => window.location.pathname.includes(seg));
         const pathPrefix = inSubdir ? '../' : '';
+        const isPrivatePreview = window.location.pathname.includes('/clase-gratis-');
 
         this.innerHTML = `
         <style>
@@ -187,6 +188,7 @@ class YogaFooter extends HTMLElement {
                         </div>
                         <p class="footer-desc">Inspirando calma, creatividad y bienestar en la infancia a través del yoga y la atención plena. Desde 2016.</p>
                         <div style="margin-top: 1.5rem;">
+                            ${isPrivatePreview ? '' : `
                             <a href="https://academia.yogakiddy.com/super-pack-de-material-de-yoga-infantil-gratis/buy" target="_blank" class="footer-gift-card" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
                                 <img src="${pathPrefix}assets/cartas-gratis.webp" alt="Cartas Gratis" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2);">
                                 <div>
@@ -194,7 +196,8 @@ class YogaFooter extends HTMLElement {
                                     <span style="display: block; font-size: 0.8rem; color: rgba(255,255,255,0.9);">Descarga 10 Cartas de Yoga</span>
                                 </div>
                             </a>
-                            <a href="https://open.spotify.com/artist/65RlyLIY7Iok1DIkAu8QZK" target="_blank" class="footer-gift-card" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; margin-top: 1rem;">
+                            `}
+                            <a href="https://open.spotify.com/artist/65RlyLIY7Iok1DIkAu8QZK" target="_blank" class="footer-gift-card" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; ${isPrivatePreview ? '' : 'margin-top: 1rem;'}">
                                 <div style="width: 45px; height: 45px; background: #1DB954; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
                                         <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>

@@ -9,7 +9,67 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+[[headers]]
+  for = "/clase-gratis-one"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
+[[headers]]
+  for = "/clase-gratis-one.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
+[[headers]]
+  for = "/clase-gratis-dos"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
+[[headers]]
+  for = "/clase-gratis-dos.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
+[[headers]]
+  for = "/clase-gratis-iii"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
+[[headers]]
+  for = "/clase-gratis-iii.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
+[[headers]]
+  for = "/clase-gratis-bonus"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
+[[headers]]
+  for = "/clase-gratis-bonus.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
 # ═══ 301 REDIRECTS — Anciennes URLs → Nouvelles URLs ═══
+
+[[redirects]]
+  from = "/clase-gratis-one"
+  to = "/clase-gratis-one.html"
+  status = 200
+
+[[redirects]]
+  from = "/clase-gratis-dos"
+  to = "/clase-gratis-dos.html"
+  status = 200
+
+[[redirects]]
+  from = "/clase-gratis-iii"
+  to = "/clase-gratis-iii.html"
+  status = 200
+
+[[redirects]]
+  from = "/clase-gratis-bonus"
+  to = "/clase-gratis-bonus.html"
+  status = 200
 
 # Pages principales
 [[redirects]]
