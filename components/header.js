@@ -116,6 +116,7 @@ class YogaHeader extends HTMLElement {
                             <li><a href="${pathPrefix}services/yoga-presencial.html">Presencial & Vivencial</a></li>
                             <li><a href="${pathPrefix}services/yoga-online-grabado.html">Curso Online (Grabado)</a></li>
                             <li><a href="${pathPrefix}services/yoga-online-vivo.html">Clases en Vivo (Meet)</a></li>
+                            <li><a href="${pathPrefix}services/formacion-yoga-en-el-aula-en-linea.html">Yoga en el Aula (Online)</a></li>
                         </ul>
                     </li>
                     <li><a href="${pathPrefix}services/laboratorio-creativo-yogakiddy.html">Laboratorio: 10 Clases</a></li>
