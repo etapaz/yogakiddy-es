@@ -8,7 +8,7 @@ class YogaFooter extends HTMLElement {
     }
 
     render() {
-        const inSubdir = ['/services/', '/blog/'].some(seg => window.location.pathname.includes(seg));
+        const inSubdir = ['/services/', '/blog/', '/clase-gratis-'].some(seg => window.location.pathname.includes(seg));
         const pathPrefix = inSubdir ? '../' : '';
         const isPrivatePreview = window.location.pathname.includes('/clase-gratis-');
 
