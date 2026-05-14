@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller de Yoga en el Aula en Línea 2026 | YogaKiddy Academy</title>
+    <title>Formación de Yoga en el Aula en Vivo (Meet) | YogaKiddy Academy</title>
     <meta name="description"
-        content="Taller online en vivo de Yoga en el Aula. 8 horas en 2 sábados para aprender herramientas prácticas de yoga, respiración y relajación para transformar tu clase. Inscripciones abiertas para agosto 2026.">
+        content="Formación online en vivo de Yoga en el Aula. 8 horas en 2 sábados para aprender herramientas prácticas de yoga, respiración y relajación para transformar tu clase. Inscripciones abiertas para agosto 2026.">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -19,21 +19,21 @@
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="YogaKiddy Academy">
     <meta property="og:title"
-        content="Formación Yoga en el Aula en línea (Directo) | YogaKiddy Academy">
+        content="Formación de Yoga en el Aula en Vivo (Meet) | YogaKiddy Academy">
     <meta property="og:description"
         content="Formación de Yoga en el Aula para docentes y profesionales. Herramientas prácticas para integrar el yoga en la escuela de forma lúdica y efectiva.">
     <meta property="og:image" content="https://yogakiddy.com/assets/yoga-aula.webp">
     <meta property="og:url" content="https://yogakiddy.com/services/formacion-yoga-en-el-aula-en-linea.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Taller de Yoga en el Aula en Línea 2026 | YogaKiddy Academy">
+    <meta name="twitter:title" content="Formación de Yoga en el Aula en Vivo (Meet) | YogaKiddy Academy">
     <meta name="twitter:description"
-        content="Taller online en vivo de Yoga en el Aula. 8 horas en 2 sábados para aprender herramientas prácticas de yoga, respiración y relajación para transformar tu clase.">
+        content="Formación online en vivo de Yoga en el Aula. 8 horas en 2 sábados para aprender herramientas prácticas de yoga, respiración y relajación para transformar tu clase.">
     <meta name="twitter:image" content="https://yogakiddy.com/assets/yoga-en-aula-2026/01.webp">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Course",
-        "name": "Taller de Yoga en el Aula en Línea",
+        "name": "Formación de Yoga en el Aula en Vivo (Google Meet)",
         "description": "8 horas de clases en vivo para aprender herramientas prácticas de yoga, respiración y relajación para transformar tu aula y mejorar el bienestar de tus estudiantes.",
         "provider": {
             "@type": "Organization",
@@ -46,7 +46,7 @@
         "hasCourseInstance": [
             {
                 "@type": "CourseInstance",
-                "name": "Yoga en el Aula en Línea - Agosto 2026",
+                "name": "Yoga en el Aula en Vivo - Agosto 2026",
                 "startDate": "2026-08-22",
                 "endDate": "2026-08-29",
                 "courseMode": "online"
@@ -59,7 +59,7 @@
                 "priceCurrency": "CLP",
                 "availability": "https://schema.org/InStock",
                 "validFrom": "2026-04-14",
-                "category": "Taller Online"
+                "category": "Formación Online"
             }
         ]
     }
@@ -92,18 +92,36 @@
             animation: float 3s ease-in-out infinite;
         }
 
+
+        /* Floating animation */
         @keyframes float {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-8px);
+            }
         }
 
+        /* Rainbow border effect */
         .floating-btn-animated::before {
             content: '';
             position: absolute;
             inset: -3px;
             border-radius: 9999px;
             padding: 3px;
-            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7f00,
+                    #ffff00,
+                    #00ff00,
+                    #0000ff,
+                    #4b0082,
+                    #9400d3,
+                    #ff0000);
             background-size: 300% 300%;
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -114,13 +132,22 @@
             opacity: 0.8;
         }
 
+        /* Sharp inner glow */
         .floating-btn-animated::after {
             content: '';
             position: absolute;
             inset: -2px;
             border-radius: 9999px;
             padding: 2px;
-            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7f00,
+                    #ffff00,
+                    #00ff00,
+                    #0000ff,
+                    #4b0082,
+                    #9400d3,
+                    #ff0000);
             background-size: 300% 300%;
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -130,14 +157,19 @@
         }
 
         @keyframes rainbow-rotate {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 300% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 300% 50%;
+            }
         }
 
-        .floating-btn-animated span,
-        .schedule-card > * {
+
+        .floating-btn-animated span {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .floating-btn-animated:hover {
@@ -147,6 +179,28 @@
         .floating-btn-animated:hover::before {
             filter: blur(12px);
             opacity: 1;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-8px) scale(1.05);
+            }
+        }
+
+
+        @media (max-width: 480px) {
+            .floating-btn-animated {
+                width: 92%;
+                bottom: 1rem;
+                padding: 1rem 1.5rem;
+                font-size: 0.9rem;
+            }
         }
 
         .date-highlight-list {
@@ -160,158 +214,10 @@
             width: fit-content;
             padding: 0.45rem 0.8rem;
             border-radius: 9999px;
-            background: linear-gradient(135deg, rgba(255, 214, 102, 0.7), rgba(255, 188, 117, 0.92));
-            border: 1px solid rgba(210, 127, 83, 0.24);
-            box-shadow: 0 10px 24px rgba(212, 122, 85, 0.14);
-            font-weight: 700;
-        }
-
-        .schedule-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .schedule-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: 1.25rem;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(212, 122, 85, 0.16);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .schedule-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255, 214, 102, 0.18), transparent 55%);
-            pointer-events: none;
-        }
-
-        .schedule-country {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.9rem;
-            padding: 0.35rem 0.7rem;
-            border-radius: 9999px;
-            background: rgba(255, 188, 117, 0.18);
-            font-weight: 700;
-            color: var(--color-accent);
-        }
-
-        .schedule-time {
-            margin: 0 0 0.8rem 0;
+            background: linear-gradient(135deg, rgba(255, 214, 102, 0.55), rgba(255, 188, 117, 0.7));
+            border: 1px solid rgba(210, 127, 83, 0.22);
+            box-shadow: 0 8px 20px rgba(212, 122, 85, 0.12);
             font-weight: 600;
-        }
-
-        .schedule-price {
-            margin: 0;
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--color-accent);
-        }
-
-        .soft-panel {
-            background: linear-gradient(135deg, rgba(214, 239, 229, 0.75), rgba(255, 249, 224, 0.9));
-            border-radius: var(--radius-xl);
-            padding: clamp(2rem, 4vw, 3rem);
-        }
-
-        .context-photo {
-            margin: 0;
-        }
-
-        .context-photo figcaption {
-            margin-top: 0.65rem;
-            font-size: 0.95rem;
-            line-height: 1.45;
-            color: var(--color-text-muted);
-            text-align: center;
-        }
-
-        .facilitator-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            align-items: start;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .facilitator-card {
-            text-align: center;
-            padding: 2rem;
-            background: var(--color-white);
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-        }
-
-        .facilitator-photo {
-            margin: 0 auto 1.5rem;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-
-        .facilitator-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .testimonial-card {
-            padding: 2rem;
-            background: var(--color-white);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--color-accent);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--color-accent);
-        }
-
-        .material-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .material-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(212, 122, 85, 0.1);
-        }
-
-        .material-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        @media (max-width: 480px) {
-            .floating-btn-animated {
-                width: 92%;
-                bottom: 1rem;
-                padding: 1rem 1.5rem;
-                font-size: 0.9rem;
-            }
         }
     </style>
 </head>
@@ -328,24 +234,24 @@
             <div class="container">
                 <div class="flex-row">
                     <div class="reveal">
-                        <span class="live-badge">TALLER EN LÍNEA</span>
-                        <h1 class="mb-3">Yoga en el Aula</h1>
+                        <span class="live-badge">CLASES EN VIVO</span>
+                        <h1 class="mb-3">Formación de Yoga en el Aula en línea (vía Google Meet)</h1>
                         <h2 style="font-size: 1.4rem; color: var(--color-accent); margin-bottom: 1rem; font-weight: 600;">Herramientas prácticas para transformar tu clase</h2>
                         <div style="margin-bottom: 1rem;">
-                            <p style="font-weight: 700; color: var(--color-accent); margin-bottom: 0.5rem;">Próximo taller:</p>
+                            <p style="font-weight: 700; color: var(--color-accent); margin-bottom: 0.5rem;">Próxima formación:</p>
                             <div class="date-highlight-list">
                                 <p class="date-highlight-item" style="margin: 0;">Sábados 22 y 29 de Agosto 2026</p>
                             </div>
                         </div>
                         <p class="text-large mb-4">Aprende a activar, enfocar y relajar a tus estudiantes en minutos. Con herramientas simples, lúdicas y efectivas, podrás ayudar a tus estudiantes a concentrarse mejor, regular sus emociones y disfrutar más el aprendizaje… <strong>sin necesidad de cambiar tu forma de enseñar</strong>.</p>
-                        <p style="font-weight: 600; color: var(--color-accent); margin: 0;">Este taller ha sido creado para que puedas integrar el yoga en tu jornada escolar de manera realista, concreta y aplicable desde el primer día.</p>
+                        <p style="font-weight: 600; color: var(--color-accent); margin: 0;">Esta formación ha sido creada para que puedas integrar el yoga en tu jornada escolar de manera realista, concreta y aplicable desde el primer día.</p>
                     </div>
                     <div class="reveal reveal-delay-2">
-                        <figure class="context-photo">
+                        <figure style="margin: 0;">
                             <img src="../assets/yoga-en-aula-2026/01.webp"
                                 alt="Docente practicando yoga en el aula con estudiantes en formación YogaKiddy"
                                 class="img-rounded-xl img-shadow" style="width: 100%;" loading="lazy">
-                            <figcaption>Imágenes de formaciones presenciales anteriores. Esta edición se realizará <strong>en línea y en directo</strong>.</figcaption>
+                            <figcaption style="margin-top: 0.65rem; font-size: 0.95rem; line-height: 1.45; color: var(--color-text-muted); text-align: center;">Imágenes de formaciones presenciales anteriores. Esta edición se realizará <strong>en línea y en directo</strong>.</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -353,7 +259,7 @@
         </section>
 
         <section class="section" style="padding-top: 0;">
-            <div class="soft-panel reveal" style="max-width: 1100px; margin: 0 auto;">
+            <div class="section-panel section-panel--sky reveal">
                 <div class="text-center mb-8">
                     <span class="pill-badge">🌱 ¿Te pasa que...?</span>
                     <h2>Identifica tus retos</h2>
@@ -368,7 +274,7 @@
                         <li><span class="icon">&#9203;</span><span>Sientes que necesitas nuevas herramientas, pero no tienes tiempo para formaciones largas</span></li>
                     </ul>
                 </div>
-                <p class="text-center" style="margin-top: 2rem; font-weight: 700; color: var(--color-accent);">Si algo de esto resuena contigo, este taller es para ti.</p>
+                <p class="text-center" style="margin-top: 2rem; font-weight: 700; color: var(--color-accent);">Si algo de esto resuena contigo, esta formación es para ti.</p>
             </div>
         </section>
 
@@ -393,7 +299,7 @@
         </section>
 
         <section class="section" style="padding-top: 0;">
-            <div class="soft-panel reveal" style="max-width: 1100px; margin: 0 auto;">
+            <div class="section-panel section-panel--mint reveal">
                 <div class="text-center mb-8">
                     <span class="pill-badge">🧠 Una propuesta con sentido</span>
                     <h2>Enfoque integral</h2>
@@ -415,15 +321,15 @@
             <div class="container">
                 <div class="flex-row reveal">
                     <div>
-                        <figure class="context-photo">
+                        <figure style="margin: 0;">
                             <img src="../assets/yoga-en-aula-2026/02.webp" alt="Material didáctico de Yoga en el Aula - láminas y pósters"
                                 class="img-rounded-xl img-shadow" style="width: 100%;" loading="lazy">
-                            <figcaption>Material didáctico digital listo para imprimir y usar en tu aula</figcaption>
+                            <figcaption style="margin-top: 0.65rem; font-size: 0.95rem; line-height: 1.45; color: var(--color-text-muted); text-align: center;">Material didáctico digital listo para imprimir y usar en tu aula</figcaption>
                         </figure>
                     </div>
                     <div>
                         <span class="pill-badge">📚 ¿Qué contenidos veremos?</span>
-                        <h2 class="mb-6">Programa del taller</h2>
+                        <h2 class="mb-6">Programa de la formación</h2>
                         <div class="accordion">
                             <div class="accordion-item">
                                 <button class="accordion-header">
@@ -483,38 +389,38 @@
                     <h2>Todo listo para usar</h2>
                     <p class="text-large">Recibirás material digital original YogaKiddy, listo para usar:</p>
                 </div>
-                <div class="material-grid">
-                    <div class="material-card">
-                        <div class="material-icon">&#128194;</div>
-                        <p><strong>Manual completo del taller (PDF)</strong></p>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="feature-box" style="text-align: center;">
+                        <div class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">&#128194;</div>
+                        <p style="margin: 0;"><strong>Manual completo de la formación (PDF)</strong></p>
                     </div>
-                    <div class="material-card">
-                        <div class="material-icon">&#128208;</div>
-                        <p><strong>20 láminas de yoga en silla</strong></p>
+                    <div class="feature-box" style="text-align: center;">
+                        <div class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">&#128208;</div>
+                        <p style="margin: 0;"><strong>20 láminas de yoga en silla</strong></p>
                     </div>
-                    <div class="material-card">
-                        <div class="material-icon">&#127912;</div>
-                        <p><strong>Póster ABCedario del Yoga</strong></p>
+                    <div class="feature-box" style="text-align: center;">
+                        <div class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">&#127912;</div>
+                        <p style="margin: 0;"><strong>Póster ABCedario del Yoga</strong></p>
                     </div>
-                    <div class="material-card">
-                        <div class="material-icon">&#127774;</div>
-                        <p><strong>Póster Saludo al Sol en silla</strong></p>
+                    <div class="feature-box" style="text-align: center;">
+                        <div class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">&#127774;</div>
+                        <p style="margin: 0;"><strong>Póster Saludo al Sol en silla</strong></p>
                     </div>
-                    <div class="material-card">
-                        <div class="material-icon">&#127183;</div>
-                        <p><strong>12 cartas del Saludo al Sol</strong></p>
+                    <div class="feature-box" style="text-align: center;">
+                        <div class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">&#127183;</div>
+                        <p style="margin: 0;"><strong>12 cartas del Saludo al Sol</strong></p>
                     </div>
-                    <div class="material-card">
-                        <div class="material-icon">&#127922;</div>
-                        <p><strong>Juego Bingo Yoga Aula</strong></p>
+                    <div class="feature-box" style="text-align: center;">
+                        <div class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">&#127922;</div>
+                        <p style="margin: 0;"><strong>Juego Bingo Yoga Aula</strong></p>
                     </div>
-                    <div class="material-card">
-                        <div class="material-icon">&#127922;</div>
-                        <p><strong>Dados de yoga en silla</strong></p>
+                    <div class="feature-box" style="text-align: center;">
+                        <div class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">&#127922;</div>
+                        <p style="margin: 0;"><strong>Dados de yoga en silla</strong></p>
                     </div>
-                    <div class="material-card">
-                        <div class="material-icon">&#10024;</div>
-                        <p><strong>Y más recursos listos para imprimir</strong></p>
+                    <div class="feature-box" style="text-align: center;">
+                        <div class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">&#10024;</div>
+                        <p style="margin: 0;"><strong>Y más recursos listos para imprimir</strong></p>
                     </div>
                 </div>
                 <p class="text-center text-subtle mt-6">Todo diseñado para que puedas aplicar lo aprendido sin tener que crear nada desde cero.</p>
@@ -529,7 +435,7 @@
                 </div>
                 <div class="grid-2">
                     <ul class="feature-list">
-                        <li><span class="icon">&#128187;</span><span>Taller <strong>100% online en vivo</strong></span></li>
+                        <li><span class="icon">&#128187;</span><span>Formación <strong>100% online en vivo</strong></span></li>
                         <li><span class="icon">&#128249;</span><span>Plataforma: <strong>Google Meet</strong></span></li>
                         <li><span class="icon">&#9201;</span><span>Duración total: <strong>8 horas</strong> (divididas en 2 jornadas)</span></li>
                     </ul>
@@ -548,31 +454,31 @@
                     <h2>Sábados 22 y 29 de agosto 2026</h2>
                     <p class="text-large">Horarios según país</p>
                 </div>
-                <div class="schedule-grid">
-                    <div class="schedule-card">
-                        <p class="schedule-country">&#127464;&#127473; Chile</p>
-                        <p class="schedule-time">10:00 a 12:00 y 14:00 a 16:00</p>
-                        <p class="schedule-price">$75.000 CLP</p>
+                <div class="grid-auto" style="max-width: 1000px; margin: 0 auto;">
+                    <div class="pricing-card">
+                        <p style="font-weight: 700;">CHILE &#127464;&#127473;</p>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">10:00 a 12:00 y 14:00 a 16:00</p>
+                        <h4>$75.000 CLP</h4>
                     </div>
-                    <div class="schedule-card">
-                        <p class="schedule-country">&#127462;&#127479; Argentina</p>
-                        <p class="schedule-time">10:00 a 12:00 y 14:00 a 16:00</p>
-                        <p class="schedule-price">$55.000 ARS</p>
+                    <div class="pricing-card">
+                        <p style="font-weight: 700;">ARGENTINA &#127462;&#127479;</p>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">10:00 a 12:00 y 14:00 a 16:00</p>
+                        <h4>$55.000 ARS</h4>
                     </div>
-                    <div class="schedule-card">
-                        <p class="schedule-country">&#127482;&#127486; Uruguay</p>
-                        <p class="schedule-time">10:00 a 12:00 y 14:00 a 16:00</p>
-                        <p class="schedule-price">80 USD</p>
+                    <div class="pricing-card">
+                        <p style="font-weight: 700;">URUGUAY &#127482;&#127486;</p>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">10:00 a 12:00 y 14:00 a 16:00</p>
+                        <h4>80 USD</h4>
                     </div>
-                    <div class="schedule-card">
-                        <p class="schedule-country">&#127474;&#127485; México</p>
-                        <p class="schedule-time">08:00 a 10:00 y 12:00 a 14:00</p>
-                        <p class="schedule-price">$1.500 MXN</p>
+                    <div class="pricing-card">
+                        <p style="font-weight: 700;">MÉXICO &#127474;&#127485;</p>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">08:00 a 10:00 y 12:00 a 14:00</p>
+                        <h4>$1.500 MXN</h4>
                     </div>
-                    <div class="schedule-card">
-                        <p class="schedule-country">&#127466;&#127480; España</p>
-                        <p class="schedule-time">16:00 a 18:00 y 20:00 a 22:00</p>
-                        <p class="schedule-price">75 EUR</p>
+                    <div class="pricing-card">
+                        <p style="font-weight: 700;">ESPAÑA &#127466;&#127480;</p>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">16:00 a 18:00 y 20:00 a 22:00</p>
+                        <h4>75 EUR</h4>
                     </div>
                 </div>
                 <div class="text-center mt-8">
@@ -582,10 +488,10 @@
         </section>
 
         <section class="section">
-            <div class="soft-panel reveal" style="max-width: 1100px; margin: 0 auto;">
+            <div class="section-panel section-panel--sky reveal">
                 <div class="text-center mb-8">
                     <span class="pill-badge">&#127941; ¿Es para ti?</span>
-                    <h2>Este taller es para ti si trabajas con niños o comunidad educativa</h2>
+                    <h2>Esta formación es para ti si trabajas con niños o comunidad educativa</h2>
                 </div>
                 <div class="grid-3">
                     <ul class="feature-list">
@@ -608,13 +514,13 @@
         </section>
 
         <section class="section" style="padding-top: 0;">
-            <div class="soft-panel reveal" style="max-width: 1100px; margin: 0 auto;">
+            <div class="section-panel section-panel--yellow reveal">
                 <div class="text-center mb-6">
                     <span class="pill-badge">&#128260; Comparativa</span>
                     <h2>¿En qué se diferencia de la formación de Yoga Infantil?</h2>
                 </div>
                 <div class="container-narrow">
-                    <p class="text-large">Este taller está enfocado en:</p>
+                    <p class="text-large">Esta formación está enfocada en:</p>
                     <ul class="feature-list">
                         <li><span class="icon">&#9989;</span><span>Intervenciones dentro del aula</span></li>
                         <li><span class="icon">&#9989;</span><span>Espacios reducidos</span></li>
@@ -627,23 +533,26 @@
         </section>
 
         <section class="section">
-            <div class="section-panel section-panel--mint reveal">
+            <div class="section-panel section-panel--dark reveal">
                 <div class="text-center mb-8">
-                    <span class="pill-badge">&#11088; Testimonios</span>
+                    <span class="pill-badge" style="border-color: rgba(255,255,255,0.4);">&#11088; Testimonios</span>
                     <h2>Lo que dicen quienes ya lo han vivido</h2>
                 </div>
                 <div class="grid-3">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" style="display: flex; flex-direction: column; justify-content: center;">
                         <p class="testimonial-text">"Me llevo herramientas concretas, aplicables y una experiencia muy cercana. Se siente el amor por lo que hacen."</p>
                         <p class="testimonial-author">- Luis</p>
+                        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" style="display: flex; flex-direction: column; justify-content: center;">
                         <p class="testimonial-text">"Lograron traspasar la pantalla con mucha claridad y calidez. Totalmente recomendable."</p>
                         <p class="testimonial-author">- María José</p>
+                        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" style="display: flex; flex-direction: column; justify-content: center;">
                         <p class="testimonial-text">"Una formación que abre nuevas posibilidades dentro del aula."</p>
                         <p class="testimonial-author">- Macarena</p>
+                        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                     </div>
                 </div>
             </div>
@@ -655,23 +564,17 @@
                     <span class="pill-badge">&#127807; Quiénes te acompañarán</span>
                     <h2>Tus instructoras</h2>
                 </div>
-                <div class="facilitator-layout">
-                    <div class="facilitator-card">
-                        <figure class="facilitator-photo">
-                            <img src="../assets/peggy.webp" alt="Peggysue Silva S. - Instructora de Yoga en el Aula"
-                                loading="lazy" width="150" height="150">
-                        </figure>
-                        <p class="team-role" style="margin-bottom: 0.5rem;">Instructora</p>
-                        <h3 class="team-name" style="margin-bottom: 1rem;">Peggysue Silva S.</h3>
+                <div class="team-grid" style="max-width: 700px; margin: 0 auto;">
+                    <div class="team-card">
+                        <img src="../assets/peggy.webp" alt="Peggysue Silva S." class="team-avatar" loading="lazy">
+                        <p class="team-role">Instructora</p>
+                        <h3 class="team-name">Peggysue Silva S.</h3>
                         <p class="team-bio">Psicopedagoga integrativa, instructora de yoga, danzaterapeuta y especialista en trabajo con infancia.</p>
                     </div>
-                    <div class="facilitator-card">
-                        <figure class="facilitator-photo">
-                            <img src="../assets/carmen.webp" alt="Carmen Sepúlveda A. - Fundadora de YogaKiddy Academy"
-                                loading="lazy" width="150" height="150">
-                        </figure>
-                        <p class="team-role" style="margin-bottom: 0.5rem;">Directora</p>
-                        <h3 class="team-name" style="margin-bottom: 1rem;">Carmen Sepúlveda A.</h3>
+                    <div class="team-card">
+                        <img src="../assets/carmen.webp" alt="Carmen Sepúlveda A." class="team-avatar" loading="lazy">
+                        <p class="team-role">Directora</p>
+                        <h3 class="team-name">Carmen Sepúlveda A.</h3>
                         <p class="team-bio">Fundadora de YogaKiddy Academy. Profesora de yoga especializada en yoga infantil, yoga en el aula y yoga inclusivo.</p>
                     </div>
                 </div>
@@ -679,7 +582,7 @@
         </section>
 
         <section class="section">
-            <div class="soft-panel reveal" style="max-width: 800px; margin: 0 auto;">
+            <div class="section-panel section-panel--sky reveal" style="max-width: 800px; margin: 0 auto;">
                 <div class="text-center mb-8">
                     <span class="pill-badge">&#10067; Preguntas frecuentes</span>
                     <h2>Resolviendo tus dudas</h2>
@@ -691,7 +594,7 @@
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>No. Este taller está diseñado para principiantes y también para quienes ya trabajan con niños.</p>
+                            <p>No. Esta formación está diseñada para principiantes y también para quienes ya trabajan con niños.</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -717,7 +620,7 @@
         </section>
 
         <section class="section" style="padding-top: 0;">
-            <div class="soft-panel reveal" style="max-width: 1100px; margin: 0 auto;">
+            <div class="section-panel section-panel--sky reveal">
                 <div class="text-center mb-6">
                     <span class="pill-badge">&#128170; Comunidad</span>
                     <h2>Más que una capacitación</h2>
