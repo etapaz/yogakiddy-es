@@ -48,7 +48,9 @@
                 "name": "Sonoterapia Infantil en Línea - Junio 2026",
                 "startDate": "2026-06-06",
                 "endDate": "2026-06-27",
-                "courseMode": "online"
+                "courseMode": "online",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode"
             }
         ]
     }
@@ -153,6 +155,46 @@
             border: 1px solid rgba(210, 127, 83, 0.24);
             box-shadow: 0 10px 24px rgba(212, 122, 85, 0.14);
             font-weight: 700;
+        }
+
+        .date-highlight-item--past {
+            background: rgba(120, 120, 120, 0.12);
+            border-color: rgba(120, 120, 120, 0.2);
+            box-shadow: none;
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        .date-highlight-item--upcoming {
+            background: linear-gradient(135deg, rgba(214, 239, 229, 0.9), rgba(255, 249, 224, 0.95));
+            border-color: rgba(212, 122, 85, 0.28);
+            color: var(--color-accent);
+        }
+
+        .event-passed-note {
+            margin: 0.75rem 0 0;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            background: rgba(214, 239, 229, 0.55);
+            border: 1px solid rgba(212, 122, 85, 0.18);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--color-text-muted);
+        }
+
+        .floating-btn-animated--disabled {
+            pointer-events: none;
+            cursor: default;
+            background-color: #9a9a9a;
+            animation: none;
+            white-space: normal;
+            max-width: 92%;
+            line-height: 1.35;
+        }
+
+        .floating-btn-animated--disabled::before,
+        .floating-btn-animated--disabled::after {
+            display: none;
         }
 
         .schedule-grid {
@@ -287,10 +329,16 @@
                         <span class="live-badge">FORMACIÓN EN LÍNEA</span>
                         <h1 class="mb-3">Sonoterapia Infantil en Línea</h1>
                         <div style="margin-bottom: 1rem;">
-                            <p style="font-weight: 700; color: var(--color-accent); margin-bottom: 0.5rem;">Próxima formación:</p>
+                            <p style="font-weight: 700; color: var(--color-accent); margin-bottom: 0.5rem;">Última edición
+                                (finalizada):</p>
                             <div class="date-highlight-list">
-                                <p class="date-highlight-item" style="margin: 0;">Sábados 06, 13 y 27 Junio 2026</p>
+                                <p class="date-highlight-item date-highlight-item--past" style="margin: 0;">Sábados 06, 13 y
+                                    27 de junio 2026</p>
+                                <p class="date-highlight-item date-highlight-item--upcoming" style="margin: 0;">Próxima
+                                    fecha: anunciada próximamente</p>
                             </div>
+                            <p class="event-passed-note">Esta edición ya finalizó. Las inscripciones sin compromiso ya no
+                                están disponibles. Te avisaremos aquí cuando abramos la próxima convocatoria.</p>
                         </div>
                         <p class="text-large mb-4">El sonido tiene el poder de calmar, conectar y transformar. En esta
                             formación aprenderás a llevar esa experiencia a la vida de los niños y niñas, utilizando
@@ -304,8 +352,8 @@
                             <img src="../images-bloggi/8d524e17.webp"
                                 alt="Imagen de una formación presencial de sonoterapia infantil de YogaKiddy"
                                 class="img-rounded-xl img-shadow" style="width: 100%;" loading="lazy">
-                            <figcaption>Imágenes tomadas durante formaciones presenciales anteriores. Esta edición se
-                                realizará <strong>en línea y en directo</strong>.</figcaption>
+                            <figcaption>Imágenes tomadas durante formaciones presenciales anteriores. La última edición
+                                online en vivo se realizó en <strong>junio 2026</strong>.</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -332,8 +380,8 @@
                             <img src="../images-bloggi/aa3ef98a.webp"
                                 alt="Práctica de sonoterapia infantil en una formación presencial de YogaKiddy"
                                 class="img-rounded-xl img-shadow" style="width: 100%;" loading="lazy">
-                            <figcaption>Estas fotografías corresponden a formaciones presenciales previas; la próxima
-                                versión será <strong>online en vivo</strong>.</figcaption>
+                            <figcaption>Estas fotografías corresponden a formaciones presenciales previas. La última
+                                edición online en vivo se realizó en <strong>junio 2026</strong>.</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -493,8 +541,11 @@
                 <div class="text-center mb-8">
                     <span class="pill-badge">Horarios y Valores</span>
                     <h2>Misma formación, adaptada a tu país</h2>
-                    <p class="text-large">Fechas para todos los países: <strong>3 sábados en vivo: 06, 13 y 27 de
-                            Junio 2026</strong></p>
+                    <p class="text-large">Última edición realizada: <strong>3 sábados en vivo — 06, 13 y 27 de junio
+                            2026</strong></p>
+                    <p class="event-passed-note" style="max-width: 720px; margin: 1rem auto 0;">La próxima convocatoria
+                        aún no tiene fecha confirmada. Los horarios y valores de referencia de la última edición se
+                        mantienen a modo informativo.</p>
                 </div>
                 <div class="schedule-grid">
                     <div class="schedule-card">
@@ -622,7 +673,7 @@
             <div class="section-panel section-panel--mint reveal">
                 <div class="text-center mb-8">
                     <span class="pill-badge">Preguntas Frecuentes</span>
-                    <h2>Información importante antes de inscribirte</h2>
+                    <h2>Información importante sobre la formación</h2>
                 </div>
                 <div class="container-narrow">
                     <div class="accordion">
@@ -680,9 +731,9 @@
     </main>
 
     <yk-footer></yk-footer>
-    <a href="https://airtable.com/appnBr75NVqmhHBOM/shrGdgEeE6etDlz7N" target="_blank" class="floating-btn-animated">
-        <span>Inscríbete sin compromiso</span>
-    </a>
+    <span class="floating-btn-animated floating-btn-animated--disabled" role="status" aria-live="polite">
+        <span>Próxima fecha anunciada próximamente</span>
+    </span>
 </body>
 
 </html>
