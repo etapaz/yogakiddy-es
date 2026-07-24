@@ -7,10 +7,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>Material didáctico de Yoga para niños | YogaKiddy</title>
-    <meta name="description" content="Material Digital de Yoga Infantil listos para Descargar e Imprimir. Cartas, juegos, mantras y más recursos educativos.">
+    <meta name="description" content="Material digital y físico de yoga infantil YogaKiddy: juegos, cartas, láminas, cojines terapéuticos y libros para familias, escuelas y profesionales en Chile.">
     <link rel="canonical" href="https://yogakiddy.com/material.html">
     <meta property="og:title" content="Material didáctico de Yoga para niños">
-    <meta property="og:description" content="Material Digital de Yoga Infantil listos para Descargar e Imprimir (PDF/MP3)">
+    <meta property="og:description" content="Material digital y físico de yoga infantil YogaKiddy: juegos, cartas, láminas, cojines terapéuticos y libros.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yogakiddy.com/material.html">
     <meta property="og:image" content="images-bloggi/82b108d2.webp">
@@ -87,6 +87,44 @@
             background: var(--color-text-light);
             cursor: default;
             opacity: 0.8;
+        }
+        .physical-material-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 2rem 0 2.5rem;
+        }
+        .physical-material-gallery figure {
+            margin: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #f7f3ed;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .physical-material-gallery img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .physical-material-gallery figcaption {
+            padding: 0.75rem 0.9rem;
+            color: var(--color-text-light);
+            font-size: 0.85rem;
+            line-height: 1.35;
+        }
+        @media (max-width: 700px) {
+            .physical-material-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .physical-material-gallery img {
+                height: 170px;
+            }
+        }
+        @media (max-width: 440px) {
+            .physical-material-gallery {
+                grid-template-columns: 1fr;
+            }
         }
         .btn-whatsapp {
             background: #25D366;
@@ -212,6 +250,33 @@
                 <!-- MATERIAL FISICO -->
                 <h2 style="text-align: center; margin-bottom: 1rem;">Material e Instrumentos Físicos</h2>
                 <p class="text-center"><strong><sup>🇨🇱 Disponible únicamente en Chile</sup></strong></p>
+
+                <div class="physical-material-gallery" aria-label="Galería de material físico YogaKiddy">
+                    <figure>
+                        <img src="assets/material-fisico/juego-yogakiddy-cartas.webp" alt="Cartas del juego de yoga infantil YogaKiddy" width="1400" height="1050" loading="lazy" decoding="async">
+                        <figcaption>Cartas ilustradas del juego YogaKiddy.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/material-fisico/juego-yogakiddy-completo.webp" alt="Juego de yoga YogaKiddy con tablero, cartas y piezas" width="1400" height="1867" loading="lazy" decoding="async">
+                        <figcaption>Juego YogaKiddy completo, listo para jugar.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/material-fisico/cojines-terapeuticos-yogakiddy.webp" alt="Cojines terapéuticos YogaKiddy para relajación infantil" width="1400" height="1050" loading="lazy" decoding="async">
+                        <figcaption>Cojines terapéuticos para yoga y relajación.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/material-fisico/cartas-yoga-infantil.webp" alt="Láminas grandes de yoga infantil YogaKiddy" width="1400" height="1050" loading="lazy" decoding="async">
+                        <figcaption>Láminas grandes de yoga para niños.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/material-fisico/cartas-calma-yoga.webp" alt="Cartas de calma y posturas de yoga para niños" width="1400" height="1195" loading="lazy" decoding="async">
+                        <figcaption>Cartas de yoga para acompañar momentos de calma.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/material-fisico/libro-canto-leo-aprendo-yoga.webp" alt="Libro físico Canto, Leo y Aprendo Yoga de YogaKiddy" width="1400" height="1960" loading="lazy" decoding="async">
+                        <figcaption>Libro físico “Canto, Leo y Aprendo Yoga”.</figcaption>
+                    </figure>
+                </div>
 
                 <div class="material-grid">
                     <article class="material-card">
