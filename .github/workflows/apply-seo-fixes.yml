@@ -33,15 +33,32 @@ jobs:
               to=re.search(r'^\s*to\s*=\s*"([^"]+)"',b,flags=re.M)
               if fm and to and '*' not in fm.group(1): rules.setdefault(fm.group(1).rstrip('/'),to.group(1))
 
-          # Remove dead sitemap entries and the second duplicate contact entry.
-          p=Path('sitemap.xml'); s=p.read_text()
-          for u in ['https://yogakiddy.com/services/family-yoga.html','https://yogakiddy.com/services/kids-yoga.html','https://yogakiddy.com/formacion-sonoterapia-infantil-en-linea']:
-              s,n=re.subn(r'\s*<url>\s*<loc>'+re.escape(u)+r'</loc>.*?</url>', '', s, count=1, flags=re.S)
-              assert n==1,(u,n)
-          u='https://yogakiddy.com/contact.html'
-          ms=list(re.finditer(r'\s*<url>\s*<loc>'+re.escape(u)+r'</loc>.*?</url>',s,flags=re.S))
-          assert len(ms)==2,len(ms)
-          m=ms[1]; s=s[:m.start()]+s[m.end():]; p.write_text(s)
+          # Remove dead sitemap entries and duplicate contact structurally.
+          # XML parsing avoids regex crossing adjacent <url> blocks in Actions.
+          import xml.etree.ElementTree as ET
+          p=Path('sitemap.xml')
+          tree=ET.parse(p); root=tree.getroot()
+          ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'
+          remove={
+              'https://yogakiddy.com/services/family-yoga.html',
+              'https://yogakiddy.com/services/kids-yoga.html',
+              'https://yogakiddy.com/formacion-sonoterapia-infantil-en-linea',
+          }
+          seen=set(); removed=set(); duplicate_contact=0
+          for entry in list(root):
+              loc=entry.find(ns+'loc')
+              if loc is None: continue
+              url=(loc.text or '').strip()
+              if url in remove:
+                  root.remove(entry); removed.add(url); continue
+              if url in seen:
+                  assert url=='https://yogakiddy.com/contact.html',url
+                  root.remove(entry); duplicate_contact += 1; continue
+              seen.add(url)
+          assert removed==remove,(removed,remove)
+          assert duplicate_contact==1,duplicate_contact
+          ET.indent(tree,space='  ')
+          tree.write(p,encoding='utf-8',xml_declaration=True)
 
           # Point internal links straight at final canonical destinations.
           for f in Path('.').rglob('*.html'):
