@@ -15,8 +15,11 @@ jobs:
         run: |
           set -euo pipefail
           expected=b2f5f5f3ba1855832fb4ab939c8f312a6ec64fde
-          parent=$(git rev-parse HEAD^)
-          test "$parent" = "$expected" || { echo "main moved before workflow commit: parent=$parent"; exit 1; }
+          # The temporary workflow may have been committed or corrected more than once.
+          # Accept that history only when every change since the audited base is this workflow.
+          git merge-base --is-ancestor "$expected" HEAD || { echo "audited base is not an ancestor"; exit 1; }
+          unexpected=$(git diff --name-only "$expected"..HEAD -- . ':(exclude).github/workflows/apply-seo-fixes.yml')
+          test -z "$unexpected" || { echo "main contains unrelated changes since audited base:"; printf '%s\n' "$unexpected"; exit 1; }
           python3 <<'PY'
           from pathlib import Path
           from html import escape
