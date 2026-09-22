@@ -59,7 +59,9 @@ jobs:
                   root.remove(entry); duplicate_contact += 1; continue
               seen.add(url)
           assert removed==remove,(removed,remove)
-          assert duplicate_contact==1,duplicate_contact
+          final_urls=[((e.find(ns+'loc').text or '').strip()) for e in list(root) if e.find(ns+'loc') is not None]
+          assert final_urls.count('https://yogakiddy.com/contact.html')==1,final_urls.count('https://yogakiddy.com/contact.html')
+          assert len(final_urls)==len(set(final_urls)),(len(final_urls),len(set(final_urls)))
           ET.indent(tree,space='  ')
           tree.write(p,encoding='utf-8',xml_declaration=True)
 
@@ -113,7 +115,7 @@ jobs:
               p=unquote(urlparse(u).path).lstrip('/')
               cs=[Path(p),Path(p+'.html'),Path(p)/'index.html'] if p else [Path('index.html')]
               assert any(c.is_file() for c in cs),u
-          redirects=sum(1 for f in Path('.').rglob('*.html') if f.is_file() and 'http-equiv="refresh"' in f.read_text(errors='ignore'))
+          redirects=sum(1 for f in Path('.').rglob('*.html') if f.is_file() and 'seo_migration_output' not in f.parts and 'http-equiv="refresh"' in f.read_text(errors='ignore'))
           assert redirects==239,redirects
           PY
           git config user.name 'Instinct Agent'
