@@ -148,7 +148,7 @@
                 <div class="material-grid">
                     <!-- Saludo al Sol Gratis -->
                     <article class="material-card">
-                        <a href="#saludo-al-sol">
+                        <a href="#free-material-form" class="free-material-trigger" data-material="saludo-al-sol" data-title="Saludo al Sol para Niños" data-description="Lámina imprimible de Surya Namaskar adaptada a los más pequeños. Déjanos tu email y la descarga empieza al momento." aria-controls="free-material-form" aria-expanded="false">
                             <img src="assets/saludo-al-sol-yogakiddy.webp" alt="Saludo al Sol para Niños PDF Gratis" loading="lazy">
                             <div class="material-card-content">
                                 🌞 Saludo al Sol para Niños GRATIS
@@ -218,22 +218,54 @@
                 </div>
 
 
-                <!-- SALUDO AL SOL - DESCARGA GRATIS CON EMAIL -->
-                <div id="saludo-al-sol" style="max-width: 480px; margin: 3rem auto 0; text-align: center; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 2rem 1.5rem; box-sizing: border-box;">
+                <!-- MATERIAL GRATIS - FORMULARIO EMAIL (oculto; se abre al hacer clic en una tarjeta con class "free-material-trigger") -->
+                <!-- Nuevo PDF gratis: añade una tarjeta con class="free-material-trigger" y data-material / data-title / data-description, y una línea en el worker. -->
+                <div id="free-material-form" hidden style="max-width: 480px; margin: 3rem auto 0; text-align: center; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 2rem 1.5rem; box-sizing: border-box; scroll-margin-top: 120px;">
                     <span class="pill-badge">PDF Gratuito</span>
-                    <h2 style="margin: 1rem 0 0.5rem; font-size: 1.5rem;">Saludo al Sol para Niños</h2>
-                    <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">Lámina imprimible de Surya Namaskar adaptada a los más pequeños. Déjanos tu email y la descarga empieza al momento.</p>
-                    <form id="saludo-sol-form" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <h2 id="free-material-title" style="margin: 1rem 0 0.5rem; font-size: 1.5rem;"></h2>
+                    <p id="free-material-desc" style="color: var(--color-text-light); margin-bottom: 1.5rem;"></p>
+                    <form id="free-material-email-form" style="display: flex; flex-direction: column; gap: 0.75rem;">
                         <input type="email" name="email" required placeholder="Tu email" style="padding: 0.9rem 1rem; border: 1px solid #e5e5e5; border-radius: 50px; font-size: 1rem; text-align: center;">
                         <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px;">
+                        <input type="hidden" name="material" value="">
                         <button type="submit" class="material-card-button" style="border: none; cursor: pointer;">Descargar el PDF gratis</button>
                     </form>
-                    <p id="saludo-sol-msg" style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-light);"></p>
+                    <p id="free-material-msg" style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-light);"></p>
                 </div>
                 <script>
                 (function () {
-                    var form = document.getElementById('saludo-sol-form');
-                    var msg = document.getElementById('saludo-sol-msg');
+                    var panel = document.getElementById('free-material-form');
+                    var form = document.getElementById('free-material-email-form');
+                    var msg = document.getElementById('free-material-msg');
+                    var titleEl = document.getElementById('free-material-title');
+                    var descEl = document.getElementById('free-material-desc');
+                    var triggers = document.querySelectorAll('.free-material-trigger');
+                    var current = null;
+
+                    triggers.forEach(function (t) {
+                        t.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            var id = t.getAttribute('data-material');
+                            if (current === id && !panel.hidden) {
+                                panel.hidden = true;
+                                t.setAttribute('aria-expanded', 'false');
+                                current = null;
+                                return;
+                            }
+                            triggers.forEach(function (o) { o.setAttribute('aria-expanded', 'false'); });
+                            t.setAttribute('aria-expanded', 'true');
+                            current = id;
+                            titleEl.textContent = t.getAttribute('data-title');
+                            descEl.textContent = t.getAttribute('data-description');
+                            form.material.value = id;
+                            msg.textContent = '';
+                            form.querySelector('button').disabled = false;
+                            panel.hidden = false;
+                            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            setTimeout(function () { form.email.focus({ preventScroll: true }); }, 400);
+                        });
+                    });
+
                     form.addEventListener('submit', function (e) {
                         e.preventDefault();
                         var btn = form.querySelector('button');
@@ -242,11 +274,12 @@
                         fetch('https://yogakiddy-es-subscribe.s1lex.workers.dev/subscribe', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ email: form.email.value, website: form.website.value })
+                            body: JSON.stringify({ email: form.email.value, website: form.website.value, material: form.material.value })
                         }).then(function (r) { return r.json(); }).then(function (data) {
                             if (data.ok) {
                                 msg.textContent = '¡Listo! Tu descarga empieza ahora.';
                                 window.location.href = data.download;
+                                btn.disabled = false;
                             } else {
                                 msg.textContent = data.error === 'invalid_email' ? 'Revisa tu email, parece incompleto.' : 'Algo salió mal. Inténtalo de nuevo.';
                                 btn.disabled = false;
@@ -256,6 +289,12 @@
                             btn.disabled = false;
                         });
                     });
+
+                    // old anchor links (#saludo-al-sol) still open the form
+                    if (location.hash === '#saludo-al-sol') {
+                        var t0 = document.querySelector('.free-material-trigger[data-material="saludo-al-sol"]');
+                        if (t0) t0.click();
+                    }
                 })();
                 </script>
 
