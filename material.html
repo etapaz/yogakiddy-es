@@ -146,6 +146,16 @@
                 <p class="text-center"><strong><sup>Listos para Descargar e Imprimir (PDF/MP3)</sup></strong></p>
 
                 <div class="material-grid">
+                    <!-- Saludo al Sol Gratis -->
+                    <article class="material-card">
+                        <a href="#saludo-al-sol">
+                            <img src="assets/saludo-al-sol-yogakiddy.webp" alt="Saludo al Sol para Niños PDF Gratis" loading="lazy">
+                            <div class="material-card-content">
+                                🌞 Saludo al Sol para Niños GRATIS
+                            </div>
+                        </a>
+                    </article>
+
                     <!-- Cartas Gratis -->
                     <article class="material-card">
                         <a href="https://academia.yogakiddy.com/super-pack-de-material-de-yoga-infantil-gratis/buy" target="_blank">
@@ -206,6 +216,48 @@
                         </a>
                     </article>
                 </div>
+
+
+                <!-- SALUDO AL SOL - DESCARGA GRATIS CON EMAIL -->
+                <div id="saludo-al-sol" style="max-width: 480px; margin: 3rem auto 0; text-align: center; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 2rem 1.5rem; box-sizing: border-box;">
+                    <span class="pill-badge">PDF Gratuito</span>
+                    <h2 style="margin: 1rem 0 0.5rem; font-size: 1.5rem;">Saludo al Sol para Niños</h2>
+                    <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">Lámina imprimible de Surya Namaskar adaptada a los más pequeños. Déjanos tu email y la descarga empieza al momento.</p>
+                    <form id="saludo-sol-form" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <input type="email" name="email" required placeholder="Tu email" style="padding: 0.9rem 1rem; border: 1px solid #e5e5e5; border-radius: 50px; font-size: 1rem; text-align: center;">
+                        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px;">
+                        <button type="submit" class="material-card-button" style="border: none; cursor: pointer;">Descargar el PDF gratis</button>
+                    </form>
+                    <p id="saludo-sol-msg" style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--color-text-light);"></p>
+                </div>
+                <script>
+                (function () {
+                    var form = document.getElementById('saludo-sol-form');
+                    var msg = document.getElementById('saludo-sol-msg');
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        var btn = form.querySelector('button');
+                        btn.disabled = true;
+                        msg.textContent = 'Un momento…';
+                        fetch('https://yogakiddy-es-subscribe.s1lex.workers.dev/subscribe', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ email: form.email.value, website: form.website.value })
+                        }).then(function (r) { return r.json(); }).then(function (data) {
+                            if (data.ok) {
+                                msg.textContent = '¡Listo! Tu descarga empieza ahora.';
+                                window.location.href = data.download;
+                            } else {
+                                msg.textContent = data.error === 'invalid_email' ? 'Revisa tu email, parece incompleto.' : 'Algo salió mal. Inténtalo de nuevo.';
+                                btn.disabled = false;
+                            }
+                        }).catch(function () {
+                            msg.textContent = 'Sin conexión. Inténtalo de nuevo.';
+                            btn.disabled = false;
+                        });
+                    });
+                })();
+                </script>
 
                 <hr class="divider">
 
